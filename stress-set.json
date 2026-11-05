@@ -8678,6 +8678,18 @@
    "kind": "image",
    "thumb": "thumbs/FR_RUMBA_START.jpg"
   },
+  "GJ160_ref_woman_outfit": {
+   "id": "GJ160_ref_woman_outfit",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/GJ160_ref_woman_outfit.webp",
+   "kind": "image",
+   "thumb": "thumbs/GJ160_ref_woman_outfit.jpg"
+  },
+  "GJ160_source_video": {
+   "id": "GJ160_source_video",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/GJ160_source_video.mp4",
+   "kind": "video",
+   "thumb": "thumbs/GJ160_source_video.jpg"
+  },
   "KC70_bull_mech": {
    "id": "KC70_bull_mech",
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/KC70_bull_mech.png",
