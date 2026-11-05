@@ -2709,11 +2709,11 @@
     },
     {
      "name_ru": "Траектории машин = превиз",
-     "detail_ru": "S-кривая, дистанция между машинами, сторона дороги и скорость совпадают с превизом в каждом кадре."
+     "detail_ru": "S-кривая 00:04–00:12 (пикап догоняет по внутренней), дистанция ~16 м на старте, сторона дороги и скорость совпадают с превизом в каждом кадре; камера с машины сопровождения впереди машин смотрит назад, кран вверх с 00:20."
     },
     {
      "name_ru": "Контакты в те же кадры",
-     "detail_ru": "Удар пикапа в задний бампер, отрыв на гребне и касание земли приходятся на те же кадры, что в превизе (±2 кадра)."
+     "detail_ru": "Таран пикапом заднего бампера в 13.45 с; фастбэк в воздухе 20.6–21.8 с; пикап тоже прыгает с гребня (21.3 с) и приземляется — те же кадры, что в превизе (±2 кадра)."
     },
     {
      "name_ru": "Чистая замена серого",
@@ -2742,7 +2742,7 @@
     "LO_CANYON"
    ],
    "reference_mapping": "@Video1 = BO_CHASE (grey-box blocking previs: camera path, framing, timing, car positions and trajectories); @Image1–@Image3 = PR_FASTBACK_1..3 (three photos of the same blue fastback); @Image4 = PR_PICKUP_1 (the white pickup); @Image5 = CH_DEV (the fastback's driver); @Image6 = LO_CANYON (the location: desert canyon two-lane road, red rock, midday)",
-   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the cars, the driver and the canyon from the images; nothing grey remains. The leading grey car box becomes the fastback of @Image1–@Image3, three photos of the same unbadged 1970s two-door fastback in deep blue with chrome bumpers. The chasing grey car box becomes the white 1990s pickup of @Image4. @Image5 is Dev, the fastback's driver: his face, beard, orange rain shell and grey cap. @Image6 is the location: the desert canyon two-lane road with red rock walls at midday; the grey corridor becomes this canyon.\nA 30-second photoreal car chase that re-renders @Video1 exactly. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, as one action in its own camera:\n00:00-00:08: Camera on a tracking vehicle running alongside and slightly behind. The blue fastback leads through the S-curve of the canyon road, the white pickup two car-lengths behind; through the fastback's side window Dev grips the wheel. Both cars hold the lane positions and spacing of @Video1.\n00:08-00:13: The pickup closes the gap on the straight, its grille filling the space behind the fastback.\n00:13-00:16: Contact on the exact frame of @Video1: the pickup rams the fastback's rear bumper; the fastback kicks sideways, Dev counter-steers, it fishtails once and straightens; a dent stays in the chrome bumper.\n00:16-00:22: The fastback pulls away toward a crest in the road, the pickup dropping back.\n00:22-00:25: The fastback leaves the ground over the crest exactly where and when the grey box does in @Video1, flies level with its wheels still spinning, and lands on the frame of @Video1: suspension compresses hard, dust bursts from all four tyres, it bounces once and drives on.\n00:25-00:30: The camera cranes up from the road as in @Video1, revealing the canyon, the fastback racing away and the pickup braking short of the crest in a cloud of dust.\n\n[Audio Style]\nNative sound, no music: two distinct engines — the fastback's deep V8 burble and the pickup's rougher roar — tyre roar on asphalt, gravel spitting, a heavy metal crunch on the ram, a tyre squeal on the fishtail, a moment of only wind and engine whine in the air, a hard suspension thud on landing, wind over the canyon on the crane-up.\n\n[Camera Work and Core Constraints]\nCamera, lens feel, framing, cuts and timing exactly as @Video1; 21:9. Car positions, paths, speeds and the frames of the ram, the take-off and the landing exactly as @Video1. Every grey surface is replaced: cars as @Image1–@Image4, the driver as @Image5, the canyon as @Image6. Wheels rotate at road speed, the bodies carry weight, dust follows the tyres. Midday hard sun, photoreal film look, light grain, natural shutter.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
+   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the cars, the driver and the canyon from the images; nothing grey remains. The leading grey car box becomes the fastback of @Image1–@Image3, three photos of the same unbadged 1970s two-door fastback in deep blue with chrome bumpers. The chasing grey car box becomes the white 1990s pickup of @Image4. @Image5 is Dev, the fastback's driver: his face, beard, orange rain shell and grey cap. @Image6 is the location: the desert canyon two-lane road with red rock walls at midday; the grey corridor becomes this canyon.\nA 30-second photoreal car chase that re-renders @Video1 exactly. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, as one action in its own camera:\n00:00-00:04: Camera on a tracking vehicle running ahead of the fastback and off to its side, looking back at both cars. The blue fastback leads into the canyon road, the white pickup about 16 m behind; through the windscreen Dev grips the wheel. Both cars hold the lane positions and spacing of @Video1.\n00:04-00:12: The S-curve: both cars swing right-left-right through the canyon; the pickup closes the gap on the inside line.\n00:12-00:13.45: On the straight the pickup sits right on the fastback's tail, its grille filling the space behind it.\n00:13.45: Contact on the exact frame of @Video1: the pickup's front bumper rams the fastback's rear bumper.\n00:13.55-00:16: The fastback jolts forward, Dev counter-steers, it fishtails once and recovers; a dent stays in the chrome bumper.\n00:16-00:20: The fastback pulls away down the straight toward a crest in the road, the pickup dropping back.\n00:20: The camera, still leading the cars, starts to crane up.\n00:20.6-00:21.8: The fastback leaves the ground over the crest at 00:20.6 exactly where the grey box does in @Video1, flies level with its wheels still spinning, and lands at 00:21.8: suspension compresses hard, dust bursts from all four tyres, it drives on. At 00:21.3 the pickup also jumps the crest behind it and lands.\n00:21.8-00:30: The crane keeps rising as in @Video1 and ends high, looking back down the canyon at both cars racing toward camera, both still in frame.\n\n[Audio Style]\nNative sound, no music: two distinct engines — the fastback's deep V8 burble and the pickup's rougher roar — tyre roar on asphalt, gravel spitting, a heavy metal crunch on the ram, a tyre squeal on the fishtail, a moment of only wind and engine whine in the air, a hard suspension thud on landing, wind over the canyon on the crane-up.\n\n[Camera Work and Core Constraints]\nCamera, lens feel, framing, cuts and timing exactly as @Video1; 21:9. Car positions, paths, speeds and the frames of the ram, the take-off and the landing exactly as @Video1. Every grey surface is replaced: cars as @Image1–@Image4, the driver as @Image5, the canyon as @Image6. Wheels rotate at road speed, the bodies carry weight, dust follows the tyres. Midday hard sun, photoreal film look, light grain, natural shutter.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
    "inputs_expanded": [
     "BO_CHASE",
     "PR_FASTBACK_1",
@@ -2774,11 +2774,11 @@
     },
     {
      "name_ru": "Контакты в те же кадры",
-     "detail_ru": "Захват запястья, удар локтем, отрыв от пола, касание пола после броска — в те же кадры, что в превизе (±2 кадра)."
+     "detail_ru": "Левая рука Оуэна держит правое запястье Майи 3.9–8.5 с; её левый локоть бьёт его в верх груди в 5.79 с; отрыв от пола 8.4 с, отпускание 8.9 с, плечи о пол 9.75 с — те же кадры, что в превизе (±2 кадра)."
     },
     {
      "name_ru": "Дуга тела над столом",
-     "detail_ru": "Тело Майи проходит над столом по дуге превиза, не сквозь стол; приземление с весом, перекат и подъём читаются."
+     "detail_ru": "Тело Майи на спине проходит над столом по дуге превиза, не сквозь стол; приземление на плечи с весом, кувырок назад (9.8 с), присед (10.95 с) и стойка лицом к Оуэну через стол (12.2 с) читаются."
     },
     {
      "name_ru": "Чистая замена серого",
@@ -2804,7 +2804,7 @@
     "LO_APT_3"
    ],
    "reference_mapping": "@Video1 = BO_FIGHT (grey-box blocking previs: camera, timing, fighter positions and trajectories); @Image1 = CH_MAYA (fighter A, the smaller mannequin); @Image2 = CH_OWEN (fighter B, the heavier mannequin); @Image3 = LO_APT_3 (the kitchen with white tile floor)",
-   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the two fighters and the kitchen from the images; nothing grey remains. The smaller mannequin A becomes Maya from @Image1: her face, short black bob, mustard corduroy jacket, grey hoodie, dark jeans, white sneakers. The heavier mannequin B becomes Owen from @Image2: his face, heavy build, grey stubble, navy peacoat; his flat cap stays on. The kitchen box set becomes the apartment kitchen of @Image3 with its white tile floor; the table box becomes a plain bare wooden kitchen table.\nA 20-second photoreal fight that re-renders @Video1 exactly. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, as one action in its own camera:\n00:00-00:04: Maya and Owen face each other across the kitchen in the positions of @Video1, Owen advancing.\n00:04-00:07: Owen grabs Maya's right wrist with his right hand on the frame of @Video1; her arm is pulled straight, her feet skid on the tiles.\n00:07-00:10: Maya turns into him and drives her left elbow into his jaw on the frame of @Video1; his head snaps sideways and his grip loosens but holds.\n00:10-00:14: Owen hauls her by the wrist and throws her across the table: her body leaves the floor, travels over the tabletop on the arc of @Video1 with her legs trailing, and comes down on the tiles beyond it on the frame of @Video1.\n00:14-00:17: She lands on her shoulder, rolls once with the momentum and comes up onto one knee.\n00:17-00:20: She stands up facing Owen across the table, breathing hard, as in the final frame of @Video1.\n\n[Audio Style]\nNative sound, no music: sneakers squeaking and boots scuffing on tile, the rustle of a sleeve being grabbed, a dull thud of the elbow, a grunt from Owen, the table legs scraping, a heavy body impact on tile, the roll, then both breathing hard and the fridge hum.\n\n[Camera Work and Core Constraints]\nCamera, framing, cuts and timing exactly as @Video1. Positions, paths and the frames of the grab, the elbow, the take-off and the landing exactly as @Video1. Maya is fighter A and Owen fighter B for the whole clip; they match @Image1 and @Image2 and the kitchen matches @Image3. The table stays solid and her body passes over it. Bodies carry real weight; five fingers on every hand. Practical kitchen light, realistic film look, light grain.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
+   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the two fighters and the kitchen from the images; nothing grey remains. The smaller mannequin A becomes Maya from @Image1: her face, short black bob, mustard corduroy jacket, grey hoodie, dark jeans, white sneakers. The heavier mannequin B becomes Owen from @Image2: his face, heavy build, grey stubble, navy peacoat; his flat cap stays on. The kitchen box set becomes the apartment kitchen of @Image3 with its white tile floor; the table box becomes a plain bare wooden kitchen table.\nA 20-second photoreal fight that re-renders @Video1 exactly. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, as one continuous side-on action in its own camera:\n00:00-00:02: Maya and Owen face each other in guard across the kitchen in the positions of @Video1, the table behind Maya.\n00:02-00:03.9: Maya throws a right jab toward Owen.\n00:03.9: Owen's left hand closes on Maya's right wrist on the frame of @Video1 and holds it until the throw (to about 00:08.5).\n00:05-00:05.79: Owen pulls the trapped arm; Maya winds up.\n00:05.79: Maya drives her left elbow into Owen's upper chest on the frame of @Video1.\n00:06.25-00:07.4: Owen recoils backward, still holding her wrist.\n00:07.4-00:08.4: Owen plants his right hand on Maya's chest and drives her back to the table edge.\n00:08.4: He lifts her; her feet leave the floor.\n00:08.9-00:09.75: He releases; her body arcs on its back over the tabletop on the arc of @Video1, clearing it, and her shoulders hit the tiles on the far side at 00:09.75.\n00:09.8-00:10.95: She tucks into a backward roll and comes out of it in a crouch.\n00:12.2-00:20: She stands in guard facing Owen across the table, breathing hard; the standoff holds to the end while the camera slowly pushes in, as in @Video1.\n\n[Audio Style]\nNative sound, no music: sneakers squeaking and boots scuffing on tile, the rustle of a sleeve being grabbed, a dull thud of the elbow, a grunt from Owen, the table legs scraping, a heavy body impact on tile, the roll, then both breathing hard and the fridge hum.\n\n[Camera Work and Core Constraints]\nCamera, framing, cuts and timing exactly as @Video1. Positions, paths and the frames of the grab, the elbow, the take-off and the landing exactly as @Video1. Maya is fighter A and Owen fighter B for the whole clip; they match @Image1 and @Image2 and the kitchen matches @Image3. The table stays solid and her body passes over it. Bodies carry real weight; five fingers on every hand. Practical kitchen light, realistic film look, light grain.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
    "inputs_expanded": [
     "BO_FIGHT",
     "CH_MAYA",
@@ -2829,7 +2829,7 @@
     },
     {
      "name_ru": "Путь камеры = превиз",
-     "detail_ru": "Высота, направление, скорость и точки поворота камеры совпадают с превизом; окно и дверь проходятся в те же кадры (±2 кадра)."
+     "detail_ru": "Высота, направление, скорость и точки поворота камеры совпадают с превизом; центр окна в 8.0 с, центр задней двери в 12.5 с (±2 кадра)."
     },
     {
      "name_ru": "Один кадр",
@@ -2837,7 +2837,7 @@
     },
     {
      "name_ru": "Проёмы проходимы",
-     "detail_ru": "Камера проходит через окно и выход в комнате, не сквозь стены; рамы и проёмы стоят на месте серых."
+     "detail_ru": "Камера проходит через центр окна и задней двери комнаты, не сквозь стены; рамы и проёмы стоят на месте серых."
     },
     {
      "name_ru": "Чистая замена серого",
@@ -2849,7 +2849,7 @@
     },
     {
      "name_ru": "Майя = реф",
-     "detail_ru": "Сидящая фигура — Майя как CH_MAYA: каре, лицо, горчичная куртка; сидит там же, где фигура в превизе."
+     "detail_ru": "Сидящая фигура — Майя как CH_MAYA: каре, лицо, горчичная куртка; сидит там же, где фигура в превизе, и поднимает взгляд на камеру в 17.8 с."
     },
     {
      "name_ru": "Звук",
@@ -2863,7 +2863,7 @@
     "CH_MAYA"
    ],
    "reference_mapping": "@Video1 = BO_CAMERA (grey-box blocking previs: camera path, speed, framing, timing); @Image1 = LO_ROOFTOP (the rooftops at the start); @Image2 = LO_CAFE_TERRACE (the terrace at the end); @Image3 = CH_MAYA (the seated figure)",
-   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the city, the room, the terrace and the seated person from the images; nothing grey remains. @Image1 is the rooftops: the grey roof boxes become these city rooftops with the gap between two buildings, late afternoon. @Image2 is the café terrace: the grey terrace becomes this terrace with its awning and small tables. @Image3 is Maya: the seated grey figure becomes her, with her face, short black bob, mustard corduroy jacket and grey hoodie. The grey room becomes a plain lived-in apartment room with a wooden floor, a sofa and a bookshelf, in the same late-afternoon light.\nA 20-second photoreal camera flight that re-renders @Video1 exactly. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, one continuous camera flight:\n00:00-00:05: High above the rooftops of @Image1 the camera cranes down past chimneys and water tanks, descending along the facade of one building toward an open window, exactly on the path of @Video1.\n00:05-00:08: The camera passes through the open window on the frame of @Video1, clearing the frame and the curtain, the exterior sound dropping away.\n00:08-00:13: It glides through the room at the height and speed of @Video1, past the sofa and the bookshelf, toward the open doorway on the far side.\n00:13-00:17: It exits through the doorway down onto the café terrace of @Image2, sliding between the tables under the awning.\n00:17-00:20: The move eases to a stop on Maya seated at a small table, framed exactly as the seated figure in the final frame of @Video1; she lifts her cup and looks up toward the camera.\n\n[Audio Style]\nNative sound, no music: wind and distant city traffic on the rooftops, a pigeon's wing flutter, the sound muffling as the camera enters the window to quiet room tone and a ticking clock, then opening up into the terrace: street ambience, cups on saucers, low chatter, the small clink of Maya's cup.\n\n[Camera Work and Core Constraints]\nOne continuous camera move with the path, height, speed, framing and timing of @Video1. The camera passes through real openings only. Rooftops as @Image1, terrace as @Image2, Maya as @Image3; she sits where the seated grey figure sits. One consistent late-afternoon warm sun through all spaces. Photoreal film look, light grain.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
+   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the city, the room, the terrace and the seated person from the images; nothing grey remains. @Image1 is the rooftops: the grey roof boxes become these city rooftops with the gap between two buildings, late afternoon. @Image2 is the café terrace: the grey terrace becomes this terrace with its awning and small tables. @Image3 is Maya: the seated grey figure becomes her, with her face, short black bob, mustard corduroy jacket and grey hoodie. The grey room becomes a plain lived-in apartment room with a wooden floor, a sofa and a bookshelf, in the same late-afternoon light.\nA 20-second photoreal camera flight that re-renders @Video1 exactly. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, one continuous camera flight:\n00:00-00:00.5: High above the rooftops of @Image1 across the street, looking at the hero building.\n00:00.5-00:08: The camera cranes down continuously past the facades toward one open first-floor window, exactly on the path of @Video1.\n00:08: The camera passes through the centre of the open window, clearing the frame and the curtain, the exterior sound dropping away.\n00:08.4-00:12.5: It glides through the room at the height and speed of @Video1, the table on the right, the bookshelf on the left, the sofa at the back right, toward the open back door.\n00:12.5: It passes through the centre of the open back door onto the café terrace of @Image2.\n00:14.6-00:17.8: It slides between the tables under the awning and approaches Maya seated at the nearest table.\n00:17.8-00:20: Maya looks up toward the camera; the move settles on a medium shot of her, framed exactly as the seated figure in the final frame of @Video1.\n\n[Audio Style]\nNative sound, no music: wind and distant city traffic on the rooftops, a pigeon's wing flutter, the sound muffling as the camera enters the window to quiet room tone and a ticking clock, then opening up into the terrace: street ambience, cups on saucers, low chatter, the small clink of Maya's cup.\n\n[Camera Work and Core Constraints]\nOne continuous camera move with the path, height, speed, framing and timing of @Video1. The camera passes through real openings only. Rooftops as @Image1, terrace as @Image2, Maya as @Image3; she sits where the seated grey figure sits. One consistent late-afternoon warm sun through all spaces. Photoreal film look, light grain.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
    "inputs_expanded": [
     "BO_CAMERA",
     "LO_ROOFTOP",
@@ -2892,7 +2892,7 @@
     },
     {
      "name_ru": "Склейки и биты те же",
-     "detail_ru": "Склейки примерно каждые 1,5 с в тех же кадрах; сборка защёлкивается в тот же кадр, что в превизе (±2 кадра)."
+     "detail_ru": "Жёсткие склейки ровно каждые 1,5 с (1.5, 3.0 … 13.5 с); разлёт в 2.0 с; защёлки: верх+подошва 8.75 с, шнурки 10.25 с, задник 11.75 с — за 0,25 с до склейки (±2 кадра)."
     },
     {
      "name_ru": "Чистая замена серого",
@@ -2919,7 +2919,7 @@
     "LO_STUDIO"
    ],
    "reference_mapping": "@Video1 = BO_PRODUCT (grey-box blocking previs: cuts, camera, part trajectories and timing); @Image1–@Image3 = PR_SNEAKER_1..3 (three photos of the same STRIDE ONE sneaker); @Image4 = LO_STUDIO (white cyclorama studio)",
-   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the sneaker parts and the studio from the images; nothing grey remains. @Image1–@Image3 are three photos of the same product, the STRIDE ONE running sneaker: off-white knit upper, gum sole, orange heel tab; they fix every material, colour and any lettering. The grey part boxes become its real parts: the sole box becomes the gum sole, the upper box the off-white knit upper, the lace boxes the laces, the heel-tab box the orange heel tab. @Image4 is the white cyclorama studio; the grey set becomes it.\nA 15-second photoreal product deconstruction that re-renders @Video1 exactly, with hard cuts about every 1.5 seconds. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, following its cuts:\n00:00-00:03: The complete sneaker on the white cyclorama, seen in the angles and cuts of @Video1, a slow drift around it.\n00:03-00:06: On the beat of @Video1 the sneaker comes apart along its splines: the sole drops away, the upper lifts, the laces unthread and fly out in arcs, the heel tab slides off backward — each part on its own path and speed from @Video1.\n00:06-00:10: The separated parts orbit around the empty centre as in @Video1, each turning to show its texture: knit weave, gum tread, lace aglets, the orange tab.\n00:10-00:13: The parts fly back along their splines and click together on the frame of @Video1 into the same complete sneaker.\n00:13-00:15: Final hero view of the assembled sneaker, framed as the last shot of @Video1, matching @Image1.\n\n[Audio Style]\nSound design only, no music: an airy whoosh along each part's path, a crisp stitch-and-snap as parts separate, a soft rubber thud for the sole, lace swishes, a tight percussive hit on every cut, three clicks on reassembly and one deep thump on the hero frame.\n\n[Camera Work and Core Constraints]\nCuts, camera, framing and timing exactly as @Video1. Part paths and the separation and reassembly frames exactly as @Video1. The sneaker and every part match @Image1–@Image3; the same number of parts throughout, nothing appears from nowhere. White studio of @Image4 with soft top light and a gentle floor shadow. Photoreal product look, crisp focus.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
+   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the sneaker parts and the studio from the images; nothing grey remains. @Image1–@Image3 are three photos of the same product, the STRIDE ONE running sneaker: off-white knit upper, gum sole, orange heel tab; they fix every material, colour and any lettering. The grey part boxes become its real parts: the sole box becomes the gum sole, the upper box the off-white knit upper, the lace boxes the laces, the heel-tab box the orange heel tab. @Image4 is the white cyclorama studio; the grey set becomes it.\nA 15-second photoreal product deconstruction that re-renders @Video1 exactly, with hard cuts about every 1.5 seconds. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, hard cuts every 1.5 s, part motion continuous across the cuts:\n00:00-00:01.5: Assembled sneaker, front 3/4, slow push-in.\n00:01.5-00:03: Cut to side profile; at 00:02 the sole, upper, laces and heel tab fly apart along smooth curves, each on its own path and speed from @Video1.\n00:03-00:04.5: Cut to a high rear 3/4 wide of the fully exploded stack; from 00:03.2 the laces and heel tab circle the spinning upper while the sole floats and tilts, each part turning to show its texture: knit weave, gum tread, lace aglets, the orange tab.\n00:04.5-00:06: Cut to a low angle: laces and heel tab orbiting the spinning upper.\n00:06-00:07.5: Cut to a closer orbit shot.\n00:07.5-00:09: Cut to a wide front: the upper drops onto the sole and snaps on at 00:08.75.\n00:09-00:10.5: Cut to rear 3/4: the laces drop in and lock onto the upper at 00:10.25.\n00:10.5-00:12: Cut to rear close: the heel tab locks on at 00:11.75 — the sneaker is complete.\n00:12-00:13.5: Cut to high 3/4: the complete sneaker turning.\n00:13.5-00:15: Cut to the final hero front 3/4 push-in, framed as the last shot of @Video1, matching @Image1.\n\n[Audio Style]\nSound design only, no music: an airy whoosh along each part's path, a crisp stitch-and-snap as parts separate, a soft rubber thud for the sole, lace swishes, a tight percussive hit on every cut, three clicks on reassembly and one deep thump on the hero frame.\n\n[Camera Work and Core Constraints]\nCuts, camera, framing and timing exactly as @Video1. Part paths and the separation and reassembly frames exactly as @Video1. The sneaker and every part match @Image1–@Image3; the same number of parts throughout, nothing appears from nowhere. White studio of @Image4 with soft top light and a gentle floor shadow. Photoreal product look, crisp focus.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
    "inputs_expanded": [
     "BO_PRODUCT",
     "PR_SNEAKER_1",
@@ -2945,11 +2945,11 @@
     },
     {
      "name_ru": "Порядок и время входа",
-     "detail_ru": "Пятеро входят по одному в те же кадры, что манекены; маршруты к точкам совпадают с превизом."
+     "detail_ru": "Все пятеро входят по одному через дверь в правой стене: Майя 1.96, Оуэн 4.04, Рут 6.25, Дев 8.46, Ана 10.04 с; маршруты к точкам совпадают с превизом."
     },
     {
      "name_ru": "Каждый на своей точке",
-     "detail_ru": "Кабинка — Майя, табурет у стойки — Оуэн, окно — Рут, дверь — Дев, за стойкой — Ана; финальные позиции как в превизе."
+     "detail_ru": "Кабинка — Майя (8.1 с), табурет у стойки — Оуэн (9.1 с), окно — Рут (10.3 с), дверь — Дев (11.3 с), за стойкой — Ана (16.7 с); финальные позиции как в превизе."
     },
     {
      "name_ru": "Пять лиц без смешения",
@@ -2982,7 +2982,7 @@
     "LO_DINER"
    ],
    "reference_mapping": "@Video1 = BO_STAGING (grey-box blocking previs: camera, entry timing, walking paths, marks); @Image1 = CH_MAYA (goes to the booth); @Image2 = CH_OWEN (goes to the counter stool); @Image3 = CH_ANA (goes behind the counter); @Image4 = CH_DEV (goes to the door); @Image5 = CH_RUTH (goes to the window); @Image6 = LO_DINER (the diner)",
-   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the five people and the diner from the images; nothing grey remains. Each mannequin becomes one person by the mark it walks to: the mannequin that ends in the booth is Maya from @Image1 (short black bob, mustard corduroy jacket); the one on the counter stool is Owen from @Image2 (heavy build, grey stubble, navy peacoat, flat cap); the one behind the counter is Ana from @Image3 (dark hair in a low bun, white double-breasted chef jacket, black apron); the one at the door is Dev from @Image4 (trimmed beard, orange rain shell, grey cap, messenger bag); the one at the window is Ruth from @Image5 (silver chin-length hair, reading glasses on a cord, oatmeal cardigan). The grey set becomes the 1960s diner of @Image6, with its neon sign reading \"RUBY'S — OPEN 24 HRS\".\nA 20-second photoreal staging scene that re-renders @Video1 exactly: the same entries, paths and final marks. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, in its order of entry:\n00:00-00:04: The empty diner of @Image6 in the camera of @Video1. The first person enters and walks to the booth by the window and slides in: Maya.\n00:04-00:07: The second enters and takes the counter stool: Owen, who sets his elbow on the counter.\n00:07-00:11: The third enters and walks to the window, stopping there to look out: Ruth.\n00:11-00:14: The fourth comes in and stops just inside the door, hand still on it: Dev.\n00:14-00:17: The fifth walks through to behind the counter and turns to face the room: Ana.\n00:17-00:20: All five hold on their marks exactly as in the final frame of @Video1; small natural movement only — a glance, a breath, Ruth adjusting her glasses.\n\n[Audio Style]\nNative sound, no music: the diner door bell on each entry through the door, footsteps on linoleum with a different weight for each person, the squeak of the stool and the booth vinyl, the faint buzz of the neon sign, a coffee machine gurgling, quiet room tone.\n\n[Camera Work and Core Constraints]\nCamera, framing and timing exactly as @Video1. Entry order, entry frames, walking paths and final marks exactly as @Video1, each mark taken by the person assigned to it above. Exactly five people, each matching their reference with no swapped features or clothing. The diner and its sign match @Image6; the sign is letter-perfect. People sit on seats and stand on the floor with real weight. Warm diner light with the red neon accent, realistic film look, light grain.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
+   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the five people and the diner from the images; nothing grey remains. Each mannequin becomes one person by the mark it walks to: the mannequin that ends in the booth is Maya from @Image1 (short black bob, mustard corduroy jacket); the one on the counter stool is Owen from @Image2 (heavy build, grey stubble, navy peacoat, flat cap); the one behind the counter is Ana from @Image3 (dark hair in a low bun, white double-breasted chef jacket, black apron); the one at the door is Dev from @Image4 (trimmed beard, orange rain shell, grey cap, messenger bag); the one at the window is Ruth from @Image5 (silver chin-length hair, reading glasses on a cord, oatmeal cardigan). The grey set becomes the 1960s diner of @Image6, with its neon sign reading \"RUBY'S — OPEN 24 HRS\".\nA 20-second photoreal staging scene that re-renders @Video1 exactly: the same entries, paths and final marks. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, static wide camera; everyone enters through the door in the right wall, in this order:\n00:00-00:01.96: The empty diner of @Image6 in the camera of @Video1.\n00:01.96: Maya steps in through the right-wall door and walks to the booth; she stops on the booth mark at 00:08.1 and slides in.\n00:04.04: Owen steps in through the same door and walks to the counter stool; on his mark at 00:09.1 he sets his elbow on the counter.\n00:06.25: Ruth steps in and walks to the window, stopping on her mark at 00:10.3 to look out.\n00:08.46: Dev steps in and stops on the door mark just inside the door at 00:11.3.\n00:10.04: Ana steps in, walks through to behind the counter and stops on her mark at 00:16.7, turning to face the room.\n00:16.7-00:20: All five hold on their marks exactly as in the final frame of @Video1; small natural movement only — a glance, a breath, Ruth adjusting her glasses.\n\n[Audio Style]\nNative sound, no music: the diner door bell on each entry through the door, footsteps on linoleum with a different weight for each person, the squeak of the stool and the booth vinyl, the faint buzz of the neon sign, a coffee machine gurgling, quiet room tone.\n\n[Camera Work and Core Constraints]\nCamera, framing and timing exactly as @Video1. Entry order, entry frames, walking paths and final marks exactly as @Video1, each mark taken by the person assigned to it above. Exactly five people, each matching their reference with no swapped features or clothing. The diner and its sign match @Image6; the sign is letter-perfect. People sit on seats and stand on the floor with real weight. Warm diner light with the red neon accent, realistic film look, light grain.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
    "inputs_expanded": [
     "BO_STAGING",
     "CH_MAYA",
@@ -3010,11 +3010,11 @@
     },
     {
      "name_ru": "Траектории = превиз",
-     "detail_ru": "Путь машины, высота и фаза сальто, полёт мяча совпадают с превизом в каждом кадре."
+     "detail_ru": "Путь машины по ровному полу (без трамплина), высота и фаза сальто, полёт мяча совпадают с превизом в каждом кадре."
     },
     {
      "name_ru": "Контакты в те же кадры",
-     "detail_ru": "Отрыв, удар бампером по мячу, касание мячом сетки и приземление машины — в те же кадры, что в превизе (±2 кадра)."
+     "detail_ru": "Отрыв от ровного пола 5.0 с; бампер касается мяча в 5.33 с (всего 17° сальто, нос вниз); приземление машины 6.35 с; мяч за линией ворот 6.58 с, в сетке 6.71 с — те же кадры, что в превизе (±2 кадра)."
     },
     {
      "name_ru": "Мяч остаётся в сетке",
@@ -3045,7 +3045,7 @@
     "LO_ARENA"
    ],
    "reference_mapping": "@Video1 = BO_BALL (grey-box blocking previs: camera, car and ball trajectories, timing); @Image1–@Image3 = PR_FASTBACK_1..3 (three photos of the same blue fastback); @Image4 = LO_ARENA (indoor futsal arena with the goal and net)",
-   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the car, the ball and the arena from the images; nothing grey remains. The grey car box becomes the fastback of @Image1–@Image3, three photos of the same unbadged 1970s two-door fastback in deep blue with chrome bumpers. The big grey sphere becomes a giant inflated football with a white and black panel pattern and no lettering. @Image4 is the indoor futsal arena: the grey set becomes this hall, and the grey goal frame becomes its goal with the net; any ramp box in @Video1 becomes a plain steel kicker ramp.\nA 15-second photoreal stunt that re-renders @Video1 exactly. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, as one action in its own camera:\n00:00-00:05: The fastback accelerates across the arena floor toward the giant ball on the path of @Video1, tyres gripping and spinning on the polished floor.\n00:05-00:08: It leaves the ground on the frame of @Video1 and rotates forward in a front flip around one axis, wheels still spinning, on the arc and at the height of @Video1.\n00:08-00:09: Contact on the exact frame of @Video1: the front bumper strikes the ball; the ball squashes against the chrome and springs away.\n00:09-00:12: The ball flies on the trajectory of @Video1 into the goal; the net bulges deep, catches it and the ball drops and stays inside the net, rocking to rest.\n00:12-00:15: The fastback completes the flip and lands on all four wheels on the frame of @Video1, suspension compressing hard; it skids to a stop facing the goal as in the final frame of @Video1.\n\n[Audio Style]\nNative sound, no music: the V8 revving up and echoing round the hall, tyre squeal on the polished floor, a sudden hush of engine whine in the air, a deep rubbery boom on the bumper hit, the swish and stretch of the net, a heavy suspension thud and tyre chirp on landing, the arena echo fading.\n\n[Camera Work and Core Constraints]\nCamera, framing, cuts and timing exactly as @Video1. Car path, flip arc, ball trajectory and the frames of take-off, bumper hit, net contact and landing exactly as @Video1. The car matches @Image1–@Image3 and the arena and goal match @Image4. Wheels rotate, the body turns as one rigid piece, the ball keeps its size, deforms on impact and stays in the net. Even bright arena light, photoreal film look, light grain.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
+   "prompt": "[Core Task]\n[Reference Mapping] @Video1 is a grey-box 3D blocking previs: it controls camera path, framing, timing, positions and trajectories; the grey boxes become the car, the ball and the arena from the images; nothing grey remains. The grey car box becomes the fastback of @Image1–@Image3, three photos of the same unbadged 1970s two-door fastback in deep blue with chrome bumpers. The big grey sphere becomes a giant inflated football with a white and black panel pattern and no lettering. @Image4 is the indoor futsal arena: the grey set becomes this hall, and the grey goal frame becomes its goal with the net; the arena floor is flat: there is no ramp.\nA 15-second photoreal stunt that re-renders @Video1 exactly. Match @Video1 frame by frame: the same camera path, lens feel, framing, cuts and timing, the same positions, trajectories and speeds, and every contact on the same frame as in @Video1. The times below describe the beats of @Video1; where they differ, @Video1 wins.\n\n[Plot Summary]\nBeats of @Video1, as one action in its own camera:\n00:00-00:05: The fastback drives straight at the giant ball across the flat arena floor on the path of @Video1, tyres gripping and spinning on the polished floor; the chase camera behind-right swings to a 3/4 side view before the jump.\n00:05: It jumps off the flat floor — no ramp — on the frame of @Video1 and starts a forward flip around one axis, wheels still spinning.\n00:05.33: Contact on the exact frame of @Video1, only 17° into the flip with the nose pitched down: the front bumper touches the ball; the ball squashes against the chrome and at 00:05.38 launches up and forward toward the goal. Only the car is near the ball.\n00:06.35: The fastback completes the flip and lands on all four wheels, suspension compressing hard, and brakes.\n00:06.58-00:07.71: The ball crosses the goal line under the crossbar at 00:06.58, hits the back net at 00:06.71 and the net bulges deep, then drops to the floor inside the goal at 00:07.71 and stays in the net.\n00:07.85-00:15: The car is stopped; hold on the car and the ball in the net to the end, as in the final frame of @Video1.\n\n[Audio Style]\nNative sound, no music: the V8 revving up and echoing round the hall, tyre squeal on the polished floor, a sudden hush of engine whine in the air, a deep rubbery boom on the bumper hit, the swish and stretch of the net, a heavy suspension thud and tyre chirp on landing, the arena echo fading.\n\n[Camera Work and Core Constraints]\nCamera, framing, cuts and timing exactly as @Video1. Car path, flip arc, ball trajectory and the frames of take-off, bumper hit, net contact and landing exactly as @Video1. The car matches @Image1–@Image3 and the arena and goal match @Image4. Wheels rotate, the body turns as one rigid piece, the ball keeps its size, deforms on impact and stays in the net. Even bright arena light, photoreal film look, light grain.\n\n[Negative Prompt]\ngrey boxes, untextured geometry, mannequins, previs look, subtitles, watermark, logos, music",
    "inputs_expanded": [
     "BO_BALL",
     "PR_FASTBACK_1",
@@ -3266,6 +3266,70 @@
    ]
   },
   {
+   "id": "64",
+   "tier": "real",
+   "direction": "Реальный кейс · Arena Zero",
+   "contrast": "",
+   "task_mode": "R2V+blockout",
+   "aspect_ratio": "21:9",
+   "duration": "6s",
+   "title_ru": "Горячий источник: сумо фоткает Лео кольцом-камерой и постит",
+   "summary_ru": "Шесть секунд, два плана по превизу со склейкой на 2,6 с: Лео по грудь в красной слизи тянется к фиолетовому сумо и орёт «NOOOOOOO!», тот щёлкает его кольцом-камерой на поднятом среднем пальце, из кольца вылетает голограмма со стоп-кадром, затем на крупном плане сумо «печатает» пальцем по кулаку, говорит «Hashtag grrrr Mondays.» и ухмыляется, сосед хохочет. Сложно: кольца строго по рефу на четырёхпалых руках, замороженное фото внутри живого кадра, камера и тайминг по серому превизу без его текста и цвета, промпт на китайском.",
+   "checks": [
+    {
+     "name_ru": "Два плана по превизу",
+     "detail_ru": "Ровно два плана, жёсткая склейка на 2,6 с, всего 6 с. Ракурс, крупность, движение камеры и расстановка как в @Video 1; его серый цвет, простые формы, белый текст и таймкод в кадр не попадают."
+    },
+    {
+     "name_ru": "Кольца по рефу",
+     "detail_ru": "На правой руке сумо три кольца как на рефе: гладкое золотое у большого пальца, большая печатка с плоским чёрным восьмиугольным камнем на среднем, толстая золотая с маленьким овальным чёрным камнем на крайнем. Одинаковы во всех кадрах, левая рука тоже как на рефе."
+    },
+    {
+     "name_ru": "Четыре пальца, средний вверх",
+     "detail_ru": "На каждой руке сумо большой палец и три толстых, всегда поднят именно средний. В первом плане видна ладонь, во втором тыльная сторона руки прямо на камеру."
+    },
+    {
+     "name_ru": "Вспышка и голограмма",
+     "detail_ru": "На 0,6 с щелчок и вспышка ровно в один кадр, на 0,6–0,9 с из кольца вылетает бледно-фиолетовое окно вдвое шире своей высоты. Внутри неподвижное фото Лео в момент снимка, оно не меняется ни на пиксель до конца плана, а живой Лео за окном продолжает тянуться."
+    },
+    {
+     "name_ru": "Лео",
+     "detail_ru": "Лео по грудь в слизи, лицо мокрое и чистое, верх в красной слизи, звезда на груди светится. Рука одна, левая; правая заканчивается культёй в бинтах выше локтя. Крик «NOOOOOOO!» длится 0–2,4 с, руку он тянет медленно и ровно."
+    },
+    {
+     "name_ru": "Реплика сумо",
+     "detail_ru": "Во втором плане указательный палец левой руки лежит поперёк кулака и стучит примерно раз в четверть секунды, не поднимаясь вертикально. «Hashtag grrrr Mondays.» звучит на 2,7–5,1 с низким хриплым голосом с японским акцентом, на 5,1 с сумо поднимает глаза за левый край кадра и ухмыляется."
+    },
+    {
+     "name_ru": "Сосед и слизь",
+     "detail_ru": "Сумо с ракушками сидит слева и хохочет без слов, справа никого нет. Великаны сидят на сухой скамье и ступенях и никогда не касаются слизи. Текста в кадре нет."
+    }
+   ],
+   "inputs": [
+    "AZ04_v_char_az2_leo_v2_short",
+    "AZ04_char_AZ2_Sumo_v1",
+    "AZ04_char_AZ2_Sumo_v4",
+    "AZ04_Video1",
+    "AZ04_char_AZ2_Sumo_v3",
+    "AZ04_loc_AZ2_HotSprings_v1"
+   ],
+   "reference_mapping": "@v_char_az2_leo_v2_short = AZ04_v_char_az2_leo_v2_short (Leo identity + voice video (byte-identical to AZ07_v_char_az2_leo_v2_short); 1664x1248, 5.05 s; package file v_char_az2_leo_v2_short.mp4); @char_AZ2_Sumo_v1 = AZ04_char_AZ2_Sumo_v1 (purple three-eyed tusked sumo giant ('Hothead') sheet; the only source of his rings; 5504x3072; package file de50a840-9c13-4b14-8e9d-66542ffe1db4.png); @char_AZ2_Sumo_v4 = AZ04_char_AZ2_Sumo_v4 (red-brown sumo giant with barnacles on the shoulders ('Boss'); 2720x1536; package file 32327c33-7cdb-4468-8caa-57e5c7380bde.png); @Video 1 = AZ04_Video1 (grey-box previz of both shots (cut at 2.6 s), burnt-in header text and timecode; delivered 05.11 as Video_1_previs.mp4 (same bytes as bb1fa57f-….mp4 in the same folder); 1920x816, 5.58 s; package file Video_1_previs.mp4); @char_AZ2_Sumo_v3 = AZ04_char_AZ2_Sumo_v3 (pale sumo giant with lilac veins; 5504x3072; package file af83d5a4-417f-4b19-8677-b63af5d4b07e.png); @loc_AZ2_HotSprings_v1 = AZ04_loc_AZ2_HotSprings_v1 (organic hot-spring dome with a red slime pool and white stone steps; 3120x1328; package file e7989dfc-4e5c-485a-af20-0e31f29b9bf8.png)",
+   "prompt": "【场景】\n\n在一座巨大的有机温泉穹顶里，齐胸深泡在红色黏浆里的 @v_char_az2_leo_v2_short 冲着紫色的巨型相扑 @char_AZ2_Sumo_v1 绝望地大喊一声长长的no；@char_AZ2_Sumo_v1 坐在浆池边沿干燥的白色石凳上，冲他竖着中指，中指上的金印章戒指是一台藏起来的小照相机：快门咔嚓一响，戒指闪出一道白光，一扇淡紫色的全息窗口从戒指里飞出来，里面是一张定格的照片——喊到一半、伸出左手的他。下一个镜头反打回 @char_AZ2_Sumo_v1 的近景特写，摄影机慢慢推近：他一边说出那句话，一边用左手食指在竖着中指的右拳上点按，像在手机上打字，发了出去，得意地咧嘴笑；坐在他左边的 @char_AZ2_Sumo_v4 笑得前仰后合。\n\n【戒指——全片最重要的一条】\n\n@char_AZ2_Sumo_v1 手上的戒指只以 @char_AZ2_Sumo_v1 的参考图为准，这是全片最重要的一条：每一枚戒指的形状、大小、颜色、镶石和所在的手指都和参考图一模一样，每一个镜头、每一帧都是同一套、同一形状的戒指，戒指的形状始终照参考图原样保持。他每只手是一根拇指加三根粗手指。右手三枚，从拇指往外依次是：①紧挨拇指的那根手指上，一枚素面金戒指，光亮圆鼓，没有镶石；②中间那根手指上，一枚大号印章戒指——一块又大又平的亮黑色八角形宝石（切掉四个角的方形），比这根手指还宽，镶在一圈细细的金边里；③最外侧那根手指上，一枚小一号的厚金印章戒指——粗厚圆鼓的金托包着一颗小小的椭圆形亮黑色圆顶宝石；三枚都戴在指根那一节。左手的戒指和参考图一模一样。只要他的手出现在画面里，哪怕虚在焦外、只露出一角，这些戒指都在，形状照旧；戒指是实心的金属，紧紧箍在手指上，跟着手指的每一个动作走，在主光下映出小小的冷白高光。\n\n镜头里再提到某一枚戒指时，只用下面这几个短名，不另外描述它的形状和大小，形状和大小永远照参考图：\n\n右手紧挨拇指那根手指：光亮圆鼓的素面金戒指\n\n右手中间那根手指：镶又大又平的八角形亮黑宝石的金印章戒指（藏起来的小照相机，黑宝石就是镜头）\n\n右手最外侧那根手指：厚金托包着一颗小小椭圆黑宝石的金印章戒指\n\n左手：左手的戒指和参考图一模一样\n\n@Video 1 里的手上没有戒指；戒指的样子一点都不从 @Video 1 取，只照 @char_AZ2_Sumo_v1 的参考图。\n\n【参考图】\n\n@v_char_az2_leo_v2_short = @v_char_az2_leo_v2_short 外貌的唯一依据：里奥，一个来自地球的年轻人；脸、身材、发型和服装的款式100%与 @v_char_az2_leo_v2_short 一致。这场戏里他浑身湿透：黑色短卷发湿成一绺一绺紧贴头皮，额前垂着几绺湿卷；脸湿亮、干干净净，没有红浆；深灰黑色的护甲上衣从领口到浆面糊满一层浓稠发亮的红色黏浆，一道道往下淌，胸口的紫色四角星徽记透过红浆发着光；伸出的左手臂挂着粉红色黏浆，几根浆丝垂到浆面。他只有一只手，左手：右臂在肘部以上截断，是一段缠着绷带的短残肢，贴在右侧肋骨上，绷带被红浆浸成粉红色。\n\n@char_AZ2_Sumo_v1 = @char_AZ2_Sumo_v1 外貌的唯一依据：暴脾气，一个约2.5米高的巨型相扑生物，紫色皮肤，三只金色眼睛，两根长长的大獠牙，头两侧耷拉着大耳朵；脸、身材、发型、服装、手和戒指100%与 @char_AZ2_Sumo_v1 一致。他每只手只有四根手指：一根拇指和三根粗得像香肠的手指，金色的尖指甲，每只手都数得出四根；三根粗手指里正中间那一根是中指。\n\n@char_AZ2_Sumo_v4 = @char_AZ2_Sumo_v4 外貌的唯一依据：老大，一个约2.5米高的巨型相扑生物，红褐色皮肤，肩上长着藤壶；100%与 @char_AZ2_Sumo_v4 一致。\n\n@char_AZ2_Sumo_v3 = @char_AZ2_Sumo_v3 外貌的唯一依据：一个约2.5米高的巨型相扑生物，苍白的皮肤上透着淡紫色的血管纹；100%与 @char_AZ2_Sumo_v3 一致。\n\n@loc_AZ2_HotSprings_v1 = 只提供地点：建筑、材质、光线和色彩。\n\n@Video 1 = 两个镜头的预演动画（previz），是调度的唯一依据：只取每个镜头摄影机的位置、高度、角度、焦段感和运镜，每个人、每只手和全息窗口在画面里的位置和大小，剪切点（2.6秒），手势和动作的时间。它是没有贴图的灰色白模：它的颜色、光、材质、简化的圆柱和圆球形状、画面上下的白色文字和时间码都不要；它的手上没有戒指，戒指只照参考图。镜头1里预演藏起了紫色巨人的头，正片里他的头在摄影机旁边、画面外；镜头2画面右边缘那一窄条浅色的人物不要。\n\n人物参考图只提供人物本身；人物身上的光和周围的一切来自这个地点。\n\n【地点地图】\n\n二十米高处布满圆孔的穹顶，深红色的肉质囊朝下喷出嘶嘶的蒸汽；直径三十米、满是浓稠发亮红色黏浆的圆池，环绕着白色石头台阶；骨白色带肋的墙壁。浆池边沿、深色拱门下面有一条白色石凳，从浆池方向看从画左到画右坐着 @char_AZ2_Sumo_v4、@char_AZ2_Sumo_v1、@char_AZ2_Sumo_v3，肩膀贴着肩膀；他们的双脚平踩在高出黏浆的干燥白色石阶上，身体从不碰到黏浆。@v_char_az2_leo_v2_short 齐胸深站在石凳前面的黏浆里，离池沿约一米半，面朝石凳。\n\n【光线】\n\n主光是穹顶圆孔里照下来的硬朗冷白色日光光柱，穿过蒸汽；红色黏浆从下方发出红橙色的光，照亮紧挨黏浆的身体下侧。0.6秒戒指朝那个人闪出一道照相机闪光，只亮一帧：他的脸和胸前一小片黏浆被扫亮，下一帧起一切和闪光之前一样。全息窗口是淡紫色的光，照亮旁边的中指。光在剪切后来自同样的方向、是同样的颜色。\n\n【首帧】\n\n第一帧就是 @Video 1 的第一帧：中近景，长焦，从紫色巨人左肩后上方越过他举起的右手往下俯拍黏浆里的那个人；@v_char_az2_leo_v2_short 在画面左边、个头很大，胸口以上露在浆面上，已经在大喊，唯一的左手五指张开，伸向画面右边那只竖着中指的紫色大手；他身后都是发亮的红色黏浆。\n\n【表演任务】\n\n喜剧来自情境本身，每个人都活在戏里。\n\n@v_char_az2_leo_v2_short 想要阻止他发出去，黏浆困住他，手够不着：第一帧已经在喊，一声长长的no越拉越绝望；他顶着黏浆平稳、缓慢地一直往前够，手臂一点一点伸直，从不来回晃；0.9秒起眼睛在那只手和窗口里自己的照片之间来回。\n\n@char_AZ2_Sumo_v1 想要在他阻止之前发出去：一直咧着嘴坏坏地笑，露出獠牙；镜头2里眼睛看着自己的双手，左手食指在右拳上飞快地点，一边亲口说台词，嘴角越翘越高；最后一个字出口的同时抬眼看向画面左边缘外的那个人，咧嘴得意地笑到最后一帧；中指一直稳稳竖着。\n\n@char_AZ2_Sumo_v4：镜头2里坐在画面左边、紫色巨人身边的石凳上，从头到尾笑得前仰后合：张大嘴、眯着眼，头往后一仰又往前一栽，拍着大腿，肩膀和肚子一抖一抖；他只笑不说话，一直坐着。\n\n【格式】\n\n严格两个镜头，硬切在2.6秒，和 @Video 1 一样；全片6秒；每一帧都是实景画面，实时速度。两个镜头都是肩扛手持，平稳好看，随呼吸轻轻起伏，运镜照 @Video 1。\n\n【镜头】\n\n镜头1（0–2.6秒）\n\n角度和运镜：照 @Video 1 镜头1：摄影机在紫色巨人左肩后上方、比他的头高，背对石凳，用长焦越过他举起的右手往下俯拍约两米半外的那个人；原地慢慢后退半步。\n\n构图：照 @Video 1：那个人在画面左边，头在画面宽度约四分之一、高度约三分之一处，头宽约占画面宽度的十分之一，浆面在他胸口；他唯一的左手在他身体的画面右侧伸向画面右边，残肢在画面左侧。画面右边四分之一是紫色巨人的右手，从手心一侧看：竖起的中指笔直朝上，指尖接近画面上边缘；两根粗手指往下扣在手心前面，拇指横压在紧挨拇指那根手指的中间一节上面；一共四根手指，一根一根数得清；三枚戒指照参考图。画面右下角是他柔和虚着的前臂。\n\n全息窗口：0.6–0.9秒从戒指里飞出来展开，之后一动不动；横向，宽约是高的两倍，约占画面宽度的十分之三，由淡紫色的光构成，有一点透明，四周一圈细细的发光边；位置照 @Video 1：画面上部中间，在那个人的头和竖起的中指之间，和中指隔着一根手指宽，不挡住他。\n\n照片：窗口里是一张静止的照片，不是视频，也不是镜子——就是这台摄影机在0.6秒快门那一刻看到的那个人，同一个角度、同一个姿势，裁得更紧，占满窗口：齐胸深在黏浆里，身体前倾，左手在画面右侧伸着，残肢在画面左侧，嘴张着，上衣糊满红浆。重要：照片从出现的第一帧到镜头1最后一帧一个像素都不动——他的嘴、手、头发、浆丝和光全都冻住；窗口外真实的他在动，照片里的他不动。\n\n时间线：（0–2.4秒）@v_char_az2_leo_v2_short：\"NOOOOOOO!\"——拖得长长的，用尽全力，歇斯底里，最后碎掉。（0.6秒）快门咔嚓一声，闪光一帧。（0.6–0.9秒）窗口伴着一声轻轻的呼声飞出来展开，照片一出现就是静止的。（0–1.6秒）焦点在那个人的脸上；（1.6秒）焦点快速拉到窗口和中指上，后面真实的他虚掉，仍在慢慢往前够。2.6秒硬切。\n\n镜头2（2.6–6秒）\n\n角度和运镜：照 @Video 1 镜头2：反打回 @char_AZ2_Sumo_v1 的近景特写，胸口以上；摄影机在浆池一侧、他身前偏他左手那一边，离他很近，高度在他的下巴，微微仰拍；从头到尾平稳、缓慢地推近。\n\n构图：照 @Video 1：右手在画面左侧三分之一前景，端端正正地立着，手背正对摄影机，中指笔直朝上、指尖接近画面上边缘，指节排成一条水平线；三枚戒指照参考图，镶又大又平的八角形亮黑宝石的金印章戒指正对着摄影机。左手在右拳右边、和指节一样高，只伸出食指，食指横着搭在右拳最外侧那根手指上面，指尖落在中指和最外侧那根手指之间的缝里；左手的戒指和参考图一模一样；左前臂从画面右下方伸过来，在他的嘴下面。他的脸在画面中间偏右，四分之三侧朝画面左边，看着自己的双手，三只金色眼睛、獠牙和嘴的动作清清楚楚。画面左边、拳头后面坐着柔和虚着的 @char_AZ2_Sumo_v4；画面右边只有紫色巨人自己的大耳朵和肩膀，没有别的人物；那个人在画面左边缘外。焦点在他的脸和双手上。\n\n时间线：（2.6–2.8秒）左手抬起来，食指搭到右拳上。（2.8–5.2秒）左手稳稳不动，只有食指在点：每一下从指根微微抬起，再干脆地点下去，大约每四分之一秒一下，一下一下分得清清楚楚；食指始终横着，从不竖起来。（2.7–5.1秒）@char_AZ2_Sumo_v1 在画面里亲口说：\"Hashtag grrrr Mondays.\"——低沉、沙哑、苍老的嗓音，浓重的日本口音；“Hashtag”又快又随便，接着一声从喉咙里滚出来、舌头打颤的开心低吼“grrrr”，一口气冲进响亮的“MON-days”（念作 MUN-dayz，重音在 MON）；眼睛看着双手，嘴角上翘。（5.1秒）他抬眼看向画面左边缘外的那个人，咧嘴露出獠牙，得意地笑。（5.2秒）食指最后点一下：一声轻轻的电子提示音“叮”——发出去了。（5.2–6秒）他一直冲那个人得意地笑到最后一帧，中指照样竖着，摄影机还在慢慢推近。\n\n【台词】\n\n全片两句，各说一次，逐字；口型只在说话人的嘴上：\n\n1（0–2.4秒）@v_char_az2_leo_v2_short：\"NOOOOOOO!\"\n\n2（2.7–5.1秒）@char_AZ2_Sumo_v1（镜头2，在画面里亲口说）：\"Hashtag grrrr Mondays.\"\n\n镜头2里说话的只有 @char_AZ2_Sumo_v1；@char_AZ2_Sumo_v4 只笑不说话。\n\n【声音】\n\n只有现场同期声。镜头1：黏浆的咕噜声和蒸汽的嘶嘶声，0.6秒照相机快门咔嚓声，窗口展开时轻轻的呼声，画面外巨人们低沉的笑声压在no下面。镜头2：@char_AZ2_Sumo_v1 的声音在最前面；@char_AZ2_Sumo_v4 低沉、粗重的大笑压在台词下面，5.1–6秒最响；指尖每点一下一声软软的轻响；5.2秒一声轻轻的“叮”。所有人声都是真实电影里现场录下的真人声音。@char_AZ2_Sumo_v1：低沉、沙哑、苍老，胸腔共鸣很重，说英语，带浓重的日本口音。@v_char_az2_leo_v2_short：普通、随意的当代英语。\n\n【物理】\n\n黏浆又稠又慢，拉成长长的浆丝再垂落，表面发亮；那个人每一步都往下陷。巨人们是重量级的软肉身体，随动作晃动再落定，始终在干燥的石凳和石阶上。全息窗口是一层光，稳稳地悬在空中。蒸汽只来自穹顶上的肉囊。\n\n【风格】\n\n落地的真人史诗摄影：实景和实际化妆，带毛孔的湿亮皮肤，活的眼睛，柔和的胶片质感，适度颗粒。画面里没有任何文字、时间码或标记。\n\n【最终锁定】\n\n@char_AZ2_Sumo_v1 的戒指只照他的参考图，每个镜头、每一帧都是同一套、同一形状；@Video 1 里没有戒指，不从视频里取戒指。每只手四根手指，竖起的永远是中指；镜头1看手心，镜头2看手背，手背正对摄影机。镜头1：窗口里是0.6秒定格的静止照片，一个像素都不动。镜头2：左手食指横着搭在右拳上点按，从不竖起来；@char_AZ2_Sumo_v4 坐在画面左边笑，画面右边没有人。@v_char_az2_leo_v2_short 只有左手，右臂是缠着绷带的短残肢，上衣糊满红浆。巨人们从不碰到黏浆。台词逐字说出，口型只在说话人的嘴上。\n\n\n",
+   "source": "Arena Zero shot 04 — Adam / aslan@higgsfield.com",
+   "model_used": "not recorded in source.json (every package shot that records its model used Seedance 2.5); result 2206x946, 6.04 s",
+   "missing_refs": [],
+   "unreferenced_inputs": [],
+   "notes": "Added in v2.3 after the partner uploaded the missing @Video 1 previz (Video_1_previs.mp4) and @v_char_az2_leo_v2_short on 05.11 (shot 04 assets/ on Drive). Prompt = delivered prompt_original.txt, 14,345 bytes, equal to the Drive size, not edited.",
+   "inputs_expanded": [
+    "AZ04_v_char_az2_leo_v2_short",
+    "AZ04_char_AZ2_Sumo_v1",
+    "AZ04_char_AZ2_Sumo_v4",
+    "AZ04_Video1",
+    "AZ04_char_AZ2_Sumo_v3",
+    "AZ04_loc_AZ2_HotSprings_v1"
+   ]
+  },
+  {
    "id": "65",
    "tier": "real",
    "direction": "Реальный кейс · Arena Zero",
@@ -3471,6 +3535,79 @@
     "AZ12_loc_AZ2_BarToilet_v1",
     "AZ12_char_AZ2_LowerPitCrowd_v2",
     "AZ12_Video3"
+   ]
+  },
+  {
+   "id": "68",
+   "tier": "real",
+   "direction": "Реальный кейс · Arena Zero",
+   "contrast": "",
+   "task_mode": "R2V",
+   "aspect_ratio": "21:9",
+   "duration": "30s",
+   "title_ru": "Каньон: Джакс вышвыривает Лео, статуя смыкает ноги",
+   "summary_ru": "Тридцать секунд, десять статичных планов на 12-мм объективе в красном каньоне у колоссальной статуи рогатой девушки: Лео вылетает из прохода между её ногами и шлёпается в песок, Ниса дразнит его и уходит, следом из темноты летит его механическая рука, Джакс рычит из арки и ударом снизу заставляет статую сомкнуть ноги. Сложно: единое направление справа налево, слэпстик-падение, рука, пролетающая над головой без касания, смена состояния статуи на ударе и восемь реплик точно по планам.",
+   "checks": [
+    {
+     "name_ru": "Десять планов по таймкоду",
+     "detail_ru": "Ровно десять планов, склейки на 2,0/6,5/8,0/12,5/15,5/19,5/23,5/26,5/28,0 с, всего 30 с."
+    },
+    {
+     "name_ru": "Направление справа налево",
+     "detail_ru": "Статуя и арка всегда в правой части кадра, тёмный каньон слева. Лео, рука и Ниса движутся справа налево. Ракурсы только сбоку или в три четверти; исключения — вид сверху в 3-м плане и нижний ракурс в 7-м. Фронтальных ракурсов и лиц в центре кадра нет."
+    },
+    {
+     "name_ru": "Объектив",
+     "detail_ru": "Во всех планах 12 мм: центр без искажений, края сжаты по вертикали и растянуты вбок. Эффекта рыбьего глаза и выпуклого центра нет."
+    },
+    {
+     "name_ru": "Реплики дословно",
+     "detail_ru": "Каждая реплика звучит один раз в своём плане: из арки «No!» — «NO!» — «Please, no…»; Лео «AAAA!!!» и «Why the fuck you gotta treat me like this?!!!»; Ниса «Let's go, Leo! That needs washing off…»; Лео «What do you mean, washing off???»; Джакс «Take this junk and get the fuck over here!!!»."
+    },
+    {
+     "name_ru": "Рука и спина Лео",
+     "detail_ru": "Механическая рука одна, с экраном «MODE 2»: она пролетает высоко над Лео, не касаясь его, падает в метре перед ним слева и лежит неподвижно. Культя с байонетным креплением остаётся пустой. Сзади на нём простая чёрная кожа, без звезды и свечения."
+    },
+    {
+     "name_ru": "Статуя",
+     "detail_ru": "До удара в 8-м плане ноги статуи разведены над проходом. После удара хромированной руки Джакса снизу ноги смыкаются и бёдра опускаются, как на закрытом рефе, с камня сыплется пыль."
+    },
+    {
+     "name_ru": "Состав и звук",
+     "detail_ru": "В кадре ровно трое: Джакс, Лео, Ниса. Во 2-м и 6-м планах Джакса не видно. Только живой звук и фоли, музыки нет. Единственный текст в кадре — «MODE 2»."
+    }
+   ],
+   "inputs": [
+    "AZ05_v_char_az2_jax_v1",
+    "AZ05_Video2",
+    "AZ05_Video1",
+    "AZ05_loc_az2_jaxdoorspot_open",
+    "AZ05_loc_AZ2_JaxDoorSpot_v1",
+    "AZ05_Image1"
+   ],
+   "reference_mapping": "@v_char_az2_jax_v1 = AZ05_v_char_az2_jax_v1 (Jax video character sheet (body, motion and voice); 1920x1080, 7.05 s; package file 6a2afa72-ea4a-4ec1-bc2c-cc209e0f08b7.mp4); @Video 2 = AZ05_Video2 (Leo identity video (face close-up + front/back full body, stump; also the bayonet-mount reference); 2352x1420, 5.00 s; package file 9f8dd794-edce-4025-a8b1-18b4bbc41777.mp4); @Video 1 = AZ05_Video1 (Nisa video character sheet (full body + face close-up); 1664x1248, 7.05 s; package file 3c8ac587-7d20-4d4a-8ed4-545ac8d1085a.mp4); @loc_az2_jaxdoorspot_open = AZ05_loc_az2_jaxdoorspot_open (red-rock canyon ending at the colossal horned girl-statue, legs OPEN over the black passage; 3120x1328; package file afc7c9c6-682d-4d0a-b8ba-2303a8562803.jpg); @loc_AZ2_JaxDoorSpot_v1 = AZ05_loc_AZ2_JaxDoorSpot_v1 (same place, statue legs CLOSED, passage sealed; 3120x1328; package file c27883d5-f211-4e67-8d05-997959d531bf.png); @Image 1 = AZ05_Image1 (Leo's cream-grey mechanical arm (spiked wrist collar, MODE 2 LCD, purple buttons); 822x2047; package file 0eca23a1-1bf1-4086-861a-3cbd5e93b355_resize.jpg)",
+   "prompt": "CONTEXT: Moments ago, inside his workshop, @v_char_az2_jax_v1 lost his patience with @Video 2, took back his mechanical arm and dragged him to the exit to throw him out. The exit is a black passage between the parted legs of a colossal horned girl-statue at the end of a dark red rock canyon. @Video 2's right forearm ends in a raw stump fitted with the bayonet mount. At the start nobody is in the canyon. By the end the boy lies beaten on the red sand, the girl has teased him and walked off into the dark, the statue has closed her legs over the passage, and the mechanical arm lies in the sand beside him.\n\n\n\n\nWHAT EACH OF THEM WANTS — THIS CLIP: @v_char_az2_jax_v1 — the boy out for good, the junk out after him, the door shut. @Video 2 — keep a shred of dignity; he cannot. @Video 1 — tease him, then take him out of this place without hurry.\n\n\n\n\n@loc_az2_jaxdoorspot_open — THE CANYON AND THE STATUE, OPEN, from the first frame until the strike in shot 8: every surface, material and light exactly as in the reference — dark red rock walls, white porous bone-like growths along both sides with dim amber lights glowing inside their holes, two small wire cages on the floor, red sand. At the far end, set into a tall stone frame under one cold lamp, the statue: a colossal kneeling horned girl seen from behind, ten metres taller than a person — huge dark rounded hips, legs and bare feet, a pale back, black hair, red-and-white horns — the whole figure finished like a painted illustration. Under her hips, between her parted legs, the black arch of the passage, tall enough for a man. People in the reference stay in the reference.\n\n@loc_AZ2_JaxDoorSpot_v1 — THE SAME PLACE, CLOSED, from the strike in shot 8 to the last frame: the same statue with her legs drawn together and her hips lowered onto them, her pose exactly as in this reference; the passage sealed.\n\n@v_char_az2_jax_v1 — JAX, his video character sheet, the only source of his body, motion and voice: a very small bright-red body hanging inside the chest of a chrome exoskeleton; a dark leather tool vest; chrome mechanical arms with spiked tool ends; an extremely long red neck, a huge black afro, one yellow eye, a black mechanical eye-lens, huge dark lips. His voice comes from the audio of the sheet. The layout, white background, display pose and studio light of the sheet stay on the sheet.\n\n@Video 2 — LEO, 100% match: face, dark curly hair, moustache and small goatee, small silver hoop earrings, the dark padded armour vest worn over a black tee — its FRONT carries the glowing purple four-pointed star plate, its BACK is plain black padded leather, clean and empty, with nothing on it, no star, no plate, no glow; dark leather shorts with purple panels, cream-and-green high-top sneakers; his right forearm ends in a raw stump just below the elbow; his left hand is his own. Identity, wardrobe. \n\n@Video 2 — THE BAYONET MOUNT, exactly as in the reference: a black leather band in a worn brass frame with a small loop on top, strapped around his raw stump; it stays on the stump the whole video.\n\n@Image 1 — THE MECHANICAL ARM, exactly as in the reference, every part of it kept, nothing lost: a life-sized right forearm and hand in worn matte cream-grey plating, bulkier than a human arm, scratched and scuffed, grime settled in the recesses, rust-brown spots, and ink tags scribbled over the plating — one large jagged black tag low on the outer forearm, smaller blue scribbles on the fingers and on the right side. THE HAND at the top, palm forward, fingers slightly curled: five digits, the four fingers of three segments each and the thumb of two; cream shell segments with rounded nail-like tips; the knuckle joints between them exposed dark ribbed gunmetal; the palm a broad shield-shaped plate with deep vertical flexion grooves below the fingers and, at its base near the wrist, a small black circular sensor recessed in a teardrop-shaped dip; small dark hex screws at the base of the palm. THE WRIST: a thick charcoal-grey metal collar, pitted and weathered, ringed with sharp polished gunmetal cone spikes, six visible from the front, the longest at the sides. THE FOREARM, tapered, built of interlocking cream plates wider at the elbow and split by deep dark panel seams, carrying on its upper face a small rectangular LCD screen in a thick black plastic bezel, backlit pale yellow, reading exactly \"MODE 2\" in blocky black digital letters with a thin battery bar and a signal icon above the text; directly beneath the screen a vertical column of seven small oval buttons in translucent deep purple-magenta, the top five grouped tight together and the bottom two set slightly apart below a seam. THE ELBOW END: a rounded cream ball joint seated in a thick-walled off-white cup lined with a thick matte black padded ring, small circular screw holes in the sides of the cup. No loose cables, no straps.\n\n@Video 1 — NISA, her video character sheet, 100% match: face, burgundy ponytail and bangs, winged eyeliner, red leather corset top, black skirt panels with red sashes, two curved red blades at her hips, spiked black gauntlets, black boots with red armoured shins. The layout, background and studio light of the sheet stay on the sheet.\n\n\n\n\nMAP AND SCREEN DIRECTION — the whole video keeps one side: the statue and the arch always hold the right side of the frame; the open canyon and its darkness lie to the left. Everything that comes out of the arch travels right to left: the boy flies right to left and lands a few metres out on the sand; the mechanical arm flies right to left high over the sand, clear of his head, and lands a metre in front of him on the left; the girl walks right to left past him and away into the dark.\n\n\n\n\nANGLE LAW, EVERY SHOT: side angles only — three-quarter from the side or full side profile, each with its direction named; the one exception is the TOP-DOWN in shot 3, and shot 7 is a LOW ANGLE looking up. Count of frontal, straight-on and centred axial views: zero.\n\n\n\n\nFRAMING, EVERY SHOT: every face and body sits on a side third, far from the frame centre; the centre holds only rock, sand, bone growths or darkness.\n\n\n\n\nLENS LOCK, EVERY SHOT: a 12 mm ultra-wide lens, 107° view. LENS DISTORTION — INWARD, PINCUSHION, ACROSS THE WIDTH: the center of the frame stays natural and true to scale; the distortion grows along the width, away from the center toward the left and right edges; near the sides every shape flattens vertically and elongates sideways, as if the sides were pulled outward; it peaks at the far left and far right as vertical compression with a soft sideways smear; the top and bottom horizontals bow inward toward the center. Count of a bulging center, walls wrapping around the center like a bowl, fisheye curve and radial stretch into the corners: zero. Every shot below repeats its lens line.\n\n\n\n\nLIGHT — natural and motivated, only from the place's own sources: the amber lights inside the bone growths, the one cold lamp above the statue's frame, the faint red bounce off the sand; soft natural falloff, faces readable, the arch pitch-black inside, deep shadow in the canyon to the left.\n\n\n\n\nSOUND LAW — production sound only: voices, foley and the low wind of the canyon; between sounds, natural silence. Count of music, score, melody, instruments, drums, ambient bed, post sound effects, whooshes and stingers: zero. Foley here: a scuffle and the servo whine echoing deep inside the passage, the heavy thud and slide of the boy on the sand, the clatter of the arm landing in the sand, boots on sand, the dull stone knock of the strike, the grinding of the statue's legs. Every spoken line lives inside its shot, once, verbatim, lip-synced when the face is in frame.\n\n\n\n\nThis video has strictly ten shots. Exactly nine hard cuts, at 0:02.0, 0:06.5, 0:08.0, 0:12.5, 0:15.5, 0:19.5, 0:23.5, 0:26.5 and 0:28.0; every cut keeps the cast, the props, the light and the screen direction.\n\n\n\n\nSHOT 1 — 0:00–0:02.0 — the empty canyon. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; a wide three-quarter view from the left side of the corridor, at chest height, far back. STATIC LOCKED SHOT — the frame holds perfectly still. The statue towers on the right third in her stone frame, ten metres above the sand, the black arch under her hips; the bone growths with their amber lights run along the walls; the dark canyon fades off to the left. Count of people in frame: zero; only dust drifting in the lamp light.\n\n\n\n\nSHOT 2 — 0:02.0–0:06.5 — the throw, SHAKY HANDHELD POINT OF VIEW. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; from the side, right to left, from behind a rock some distance away — the near rock edge fills the lower left as a soft out-of-focus foreground. The camera shakes hard and nervously the whole shot, as if someone hiding behind the rock films with a small camera in trembling hands, breathing fast. On the right third the black arch between the statue's legs, pitch-black. From deep inside it, muffled, distant and echoing, coming closer, the voice of @Video 2, as if he is being carried: \"No!\" — \"NO!\" — \"Please, no…\" — then out of the darkness @Video 2 himself flies straight out of the arch, high through the air right to left, arms and legs flailing, and crashes onto the sand like in a slapstick comedy — a thud, a bounce, a slide, a puff of red sand — landing on his stomach on the left third. Only darkness behind him.\n\n\n\n\nSHOT 3 — 0:06.5–0:08.0 — TOP-DOWN. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; from high above, straight down. Static. @Video 2 lies sprawled on his stomach on the red sand in the lower left third, the stump with the bayonet mount flung out beside him; seen from above, his back is plain black leather, clean and empty, nothing on it — no purple star, no plate, no glow; his trail of churned sand leads off toward the right edge, into the shadow of the arch.\n\n\n\n\nSHOT 4 — 0:08.0–0:12.5 — @Video 2, ground-level profile. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; full side profile at sand level, about a metre from his face, right to left. Static. His face on the left third, cheek in the red sand, sand on his lips. He lifts his face a little and yells, raw and outraged: \"AAAA!!!\" — a gasp — \"Why the fuck you gotta treat me like this?!!!\" He barely starts to push himself up on his left hand — and the boots of @Video 1 walk past right beside his face, right to left, unhurried, seen only from the knees down.\n\n\n\n\nSHOT 5 — 0:12.5–0:15.5 — @Video 1, teasing. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; three-quarter from behind and to the side, low, right to left. Static. She walks away into the darkness of the canyon on the left third, the blades swaying at her hips; far in the right background, soft, the boy on the sand. Without stopping she glances back over her right shoulder with a small mocking smile and says lightly, teasing him: \"Let's go, Leo! That needs washing off…\" — and keeps walking at the same unhurried pace.\n\n\n\n\nSHOT 6 — 0:15.5–0:19.5 — @Video 2, looking back. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; from the side at sand level, right to left. Static. He lies on his stomach on the left third, propped on his left forearm, and twists his head back over his shoulder toward the arch far in the right background, baffled: \"What do you mean, washing off???\" — on these words @Image 1 flies out of the darkness of the arch, tumbling end over end, right to left, sailing high and well clear above him, and lands on the red sand a metre in front of him on the left with a thump and a small spray of sand. It never touches him, never grazes him. He flinches and stares at it.\n\n\n\n\nSHOT 7 — 0:19.5–0:23.5 — @v_char_az2_jax_v1, LOW ANGLE. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; from the side, from below, looking up the statue, left to right. Static. On the right third he leans out of the black arch under the statue's hips — the afro, the long red neck and the chrome chest of the exoskeleton out in the lamp light, his feet still inside the passage. The yellow eye fixes the boy beyond the left edge; he growls, loud and furious: \"Take this junk and get the fuck over here!!!\"\n\n\n\n\nSHOT 8 — 0:23.5–0:26.5 — the door shuts. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; a wide side view at sand level, right to left. Static. In the foreground on the left third @Video 2 lies on his stomach, his head turned, watching the arm on the sand beside him; in the background on the right third @v_char_az2_jax_v1 pulls back into the dark, his chrome arm thrusts out from under, between the statue's legs, and strikes her crotch with one blow from below upward — a dull stone knock — and her legs swing together and her hips sink down onto them, closing the passage, her pose exactly as @loc_AZ2_JaxDoorSpot_v1; dust falls from the stone.\n\n\n\n\nSHOT 9 — 0:26.5–0:28.0 — @Video 2 sees it. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; full side profile at sand level, right to left. Static. His face on the right third, cheek near the sand; his eyes slide left and down to the mechanical arm lying on the ground, and his face falls.\n\n\n\n\nSHOT 10 — 0:28.0–0:30.0 — the arm on the sand. LENS: 12 mm ultra-wide, 107°, inward pincushion distortion, the sides stretched sideways toward the edges; from the side at sand level, right to left. STATIC LOCKED SHOT — the frame holds perfectly still. @Image 1 lies half-buried in the red sand on the left third, the \"MODE 2\" screen dimly lit, the cream plating scuffed, the spiked collar catching the amber light; the right of frame is empty sand and shadow. Nobody moves and nobody speaks; only the low wind.\n\n\n\n\nLOCKS — Exactly three people in this video: @v_char_az2_jax_v1, @Video 2 and @Video 1, one of each; nobody else in the canyon. Count of the engineer's arms or body in shots 2 and 6: zero — only the boy and the mechanical arm come out of the darkness. Count of the operator's hands or camera in frame: zero. The boy's right forearm stays a stump with @Video 2 on it the whole video; count of arms attached to the stump: zero. HIS BACK: the purple four-pointed star and its glowing plate exist only on the front of his chest; whenever he lies on his stomach the camera sees plain black leather, nothing else — count of glowing, purple or attached objects on his back: zero. THE ARM: exactly one @Image 1, every part visible as described; it never touches the boy — count of contacts between it and his head: zero; once it lands it lies still where it fell, a metre in front of him, and stays there. The statue keeps her open pose until the strike in shot 8 and her closed pose after it. The boy stays on the sand from his landing to the last frame. Count of faces in the middle of the frame: zero. Count of into-lens gazes: zero. Count of subtitles, captions and on-screen text: zero; the only lettering is \"MODE 2\" on the arm's screen.\n\n\n\n\nTHE COLOUR LAW — SEVENTY: the dark red rock and the red sand in shadow; TWENTY: the white bone-like growths; TEN: the amber glow inside them.\n\n\n\n\nARENA ZERO EP2 STYLE — photorealistic live-action film image shot on anamorphic lenses, 2.39:1: shallow depth of field, oval bokeh, horizontal lens flares, subtle film grain and halation, dust hanging in the air, sweat and pores on skin, worn fabrics. Everything in frame is practical and physical: real sets, practical makeup and prosthetics, true human anatomy and proportions, matte skin that answers the light. Every costume, prop and sign is unbranded.",
+   "source": "Arena Zero shot 05 — Adam / aslan@higgsfield.com",
+   "model_used": "not recorded in source.json (every package shot that records its model used Seedance 2.5); result 2206x946, 28.04 s",
+   "missing_refs": [],
+   "unreferenced_inputs": [],
+   "edits": [
+    {
+     "removed": ", Leos voice @audio_1",
+     "at_char": 2875,
+     "context_before": "is his own. Identity, wardrobe",
+     "context_after": ". \n\n@Video 2 — ",
+     "reason": "@audio_1 (Leo's voice) did not arrive as a confirmed file: the partner's check (05/audio_1_verification.json, 05/ASSETS.txt) shows the selected generation e5c3f914-… and its previous take had only Image 1, Video 1, Video 2 attached, and @audio_1 is a broken (red) tag in Recreate. Per the director's rule only the mention of the missing ref was removed; the rest of the prompt is byte-identical to the delivered file."
+    }
+   ],
+   "notes": "Added in v2.3. Delivered prompt_original.txt = 16,157 bytes (Drive size); the local copy was rebuilt from the earlier read_file_content text with the Drive download's blank-line runs, trailing space and no final newline restored, and matches the Drive size exactly (old copy kept as prompt_original_read_file_content.txt). The shot has no previz in its prompt; all six referenced files are present. Not used as input: LEO_S09_G01_voice_reference_18s_end.wav (5.04 s, found by the partner in Uploads → Audio; its link to @audio_1 is unconfirmed) — kept in ext/arena_zero/05/assets/.",
+   "inputs_expanded": [
+    "AZ05_v_char_az2_jax_v1",
+    "AZ05_Video2",
+    "AZ05_Video1",
+    "AZ05_loc_az2_jaxdoorspot_open",
+    "AZ05_loc_AZ2_JaxDoorSpot_v1",
+    "AZ05_Image1"
    ]
   }
  ],
@@ -3714,6 +3851,102 @@
    "model": "",
    "notes": "Nisa identity video. 1664x1248, 7.05 s. Copied byte-for-byte from ext/arena_zero/03/assets/2f97f86d-038f-475f-8cf4-696db710ca2e.mp4.",
    "thumb": "thumbs/AZ03_v_char_az2_nisa_v2_short.jpg"
+  },
+  "AZ04_Video1": {
+   "id": "AZ04_Video1",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ04_Video1.mp4",
+   "kind": "video",
+   "model": "",
+   "notes": "Grey-box previz of both shots (cut at 2.6 s), burnt-in header text and timecode; delivered 05.11 as Video_1_previs.mp4 (same bytes as bb1fa57f-….mp4 in the same folder). 1920x816, 5.58 s. Copied byte-for-byte from ext/arena_zero/04/assets/Video_1_previs.mp4.",
+   "thumb": "thumbs/AZ04_Video1.jpg"
+  },
+  "AZ04_char_AZ2_Sumo_v1": {
+   "id": "AZ04_char_AZ2_Sumo_v1",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ04_char_AZ2_Sumo_v1.png",
+   "kind": "image",
+   "model": "",
+   "notes": "Purple three-eyed tusked sumo giant ('Hothead') sheet; the only source of his rings. 5504x3072. Copied byte-for-byte from ext/arena_zero/04/assets/de50a840-9c13-4b14-8e9d-66542ffe1db4.png.",
+   "thumb": "thumbs/AZ04_char_AZ2_Sumo_v1.jpg"
+  },
+  "AZ04_char_AZ2_Sumo_v3": {
+   "id": "AZ04_char_AZ2_Sumo_v3",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ04_char_AZ2_Sumo_v3.png",
+   "kind": "image",
+   "model": "",
+   "notes": "Pale sumo giant with lilac veins. 5504x3072. Copied byte-for-byte from ext/arena_zero/04/assets/af83d5a4-417f-4b19-8677-b63af5d4b07e.png.",
+   "thumb": "thumbs/AZ04_char_AZ2_Sumo_v3.jpg"
+  },
+  "AZ04_char_AZ2_Sumo_v4": {
+   "id": "AZ04_char_AZ2_Sumo_v4",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ04_char_AZ2_Sumo_v4.png",
+   "kind": "image",
+   "model": "",
+   "notes": "Red-brown sumo giant with barnacles on the shoulders ('Boss'). 2720x1536. Copied byte-for-byte from ext/arena_zero/04/assets/32327c33-7cdb-4468-8caa-57e5c7380bde.png.",
+   "thumb": "thumbs/AZ04_char_AZ2_Sumo_v4.jpg"
+  },
+  "AZ04_loc_AZ2_HotSprings_v1": {
+   "id": "AZ04_loc_AZ2_HotSprings_v1",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ04_loc_AZ2_HotSprings_v1.png",
+   "kind": "image",
+   "model": "",
+   "notes": "Organic hot-spring dome with a red slime pool and white stone steps. 3120x1328. Copied byte-for-byte from ext/arena_zero/04/assets/e7989dfc-4e5c-485a-af20-0e31f29b9bf8.png.",
+   "thumb": "thumbs/AZ04_loc_AZ2_HotSprings_v1.jpg"
+  },
+  "AZ04_v_char_az2_leo_v2_short": {
+   "id": "AZ04_v_char_az2_leo_v2_short",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ04_v_char_az2_leo_v2_short.mp4",
+   "kind": "video",
+   "model": "",
+   "notes": "Leo identity + voice video (byte-identical to AZ07_v_char_az2_leo_v2_short). 1664x1248, 5.05 s. Copied byte-for-byte from ext/arena_zero/04/assets/v_char_az2_leo_v2_short.mp4.",
+   "thumb": "thumbs/AZ04_v_char_az2_leo_v2_short.jpg"
+  },
+  "AZ05_Image1": {
+   "id": "AZ05_Image1",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ05_Image1.jpg",
+   "kind": "image",
+   "model": "",
+   "notes": "Leo's cream-grey mechanical arm (spiked wrist collar, MODE 2 LCD, purple buttons). 822x2047. Copied byte-for-byte from ext/arena_zero/05/assets/0eca23a1-1bf1-4086-861a-3cbd5e93b355_resize.jpg.",
+   "thumb": "thumbs/AZ05_Image1.jpg"
+  },
+  "AZ05_Video1": {
+   "id": "AZ05_Video1",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ05_Video1.mp4",
+   "kind": "video",
+   "model": "",
+   "notes": "Nisa video character sheet (full body + face close-up). 1664x1248, 7.05 s. Copied byte-for-byte from ext/arena_zero/05/assets/3c8ac587-7d20-4d4a-8ed4-545ac8d1085a.mp4.",
+   "thumb": "thumbs/AZ05_Video1.jpg"
+  },
+  "AZ05_Video2": {
+   "id": "AZ05_Video2",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ05_Video2.mp4",
+   "kind": "video",
+   "model": "",
+   "notes": "Leo identity video (face close-up + front/back full body, stump; also the bayonet-mount reference). 2352x1420, 5.00 s. Copied byte-for-byte from ext/arena_zero/05/assets/9f8dd794-edce-4025-a8b1-18b4bbc41777.mp4.",
+   "thumb": "thumbs/AZ05_Video2.jpg"
+  },
+  "AZ05_loc_AZ2_JaxDoorSpot_v1": {
+   "id": "AZ05_loc_AZ2_JaxDoorSpot_v1",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ05_loc_AZ2_JaxDoorSpot_v1.png",
+   "kind": "image",
+   "model": "",
+   "notes": "Same place, statue legs CLOSED, passage sealed. 3120x1328. Copied byte-for-byte from ext/arena_zero/05/assets/c27883d5-f211-4e67-8d05-997959d531bf.png.",
+   "thumb": "thumbs/AZ05_loc_AZ2_JaxDoorSpot_v1.jpg"
+  },
+  "AZ05_loc_az2_jaxdoorspot_open": {
+   "id": "AZ05_loc_az2_jaxdoorspot_open",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ05_loc_az2_jaxdoorspot_open.jpg",
+   "kind": "image",
+   "model": "",
+   "notes": "Red-rock canyon ending at the colossal horned girl-statue, legs OPEN over the black passage. 3120x1328. Copied byte-for-byte from ext/arena_zero/05/assets/afc7c9c6-682d-4d0a-b8ba-2303a8562803.jpg.",
+   "thumb": "thumbs/AZ05_loc_az2_jaxdoorspot_open.jpg"
+  },
+  "AZ05_v_char_az2_jax_v1": {
+   "id": "AZ05_v_char_az2_jax_v1",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/AZ05_v_char_az2_jax_v1.mp4",
+   "kind": "video",
+   "model": "",
+   "notes": "Jax video character sheet (body, motion and voice). 1920x1080, 7.05 s. Copied byte-for-byte from ext/arena_zero/05/assets/6a2afa72-ea4a-4ec1-bc2c-cc209e0f08b7.mp4.",
+   "thumb": "thumbs/AZ05_v_char_az2_jax_v1.jpg"
   },
   "AZ06_Image1": {
    "id": "AZ06_Image1",
@@ -4743,7 +4976,7 @@
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/BO_BALL.mp4",
    "kind": "video",
    "model": "",
-   "notes": "",
+   "notes": "Flat arena floor, no ramp. The light fastback jumps and starts a forward flip; its front bumper touches the ball at the hit time with zero overlap before it. Ball flies under the crossbar, bulges the back net, drops and stays inside the goal. Only the car is near the ball at impact.",
    "thumb": "thumbs/BO_BALL.jpg"
   },
   "BO_CAMERA": {
@@ -4751,7 +4984,7 @@
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/BO_CAMERA.mp4",
    "kind": "video",
    "model": "",
-   "notes": "",
+   "notes": "One continuous camera flight with no cuts: rooftops, crane down, through an open first-floor window, through the room, out the open back door onto a café terrace, ending on a seated dark-grey figure. Window and door are crossed at their centres.",
    "thumb": "thumbs/BO_CAMERA.jpg"
   },
   "BO_CHASE": {
@@ -4759,7 +4992,7 @@
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/BO_CHASE.mp4",
    "kind": "video",
    "model": "",
-   "notes": "",
+   "notes": "21:9 canyon chase, one continuous camera: tracking vehicle behind-right of the cars, then a crane-up. Lighter box = fastback (hero, leads), darker box with open bed = pickup. Road is one spline; cars never leave frame.",
    "thumb": "thumbs/BO_CHASE.jpg"
   },
   "BO_FIGHT": {
@@ -4767,7 +5000,7 @@
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/BO_FIGHT.mp4",
    "kind": "video",
    "model": "",
-   "notes": "",
+   "notes": "Mannequin A = smaller/light grey (the one thrown), B = heavier/dark grey. One continuous take, no cuts. Hand-to-wrist and elbow contacts and table clearance were checked numerically before render.",
    "thumb": "thumbs/BO_FIGHT.jpg"
   },
   "BO_PRODUCT": {
@@ -4775,7 +5008,7 @@
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/BO_PRODUCT.mp4",
    "kind": "video",
    "model": "",
-   "notes": "",
+   "notes": "Sneaker blockout: dark sole, light upper, mid-grey laces block, near-black heel tab, on a turntable pedestal. Hard camera cuts every 1.5 s; the part motion runs continuously across cuts. Reassembly snaps fall 0.25 s before a cut.",
    "thumb": "thumbs/BO_PRODUCT.jpg"
   },
   "BO_STAGING": {
@@ -4783,7 +5016,7 @@
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/BO_STAGING.mp4",
    "kind": "video",
    "model": "",
-   "notes": "",
+   "notes": "Diner box set with five floor marks (white discs, dark rings). Static wide camera. Each mannequin has its own grey and size. Entry order and marks follow the coordinator's mapping: 1 Maya to the booth, 2 Owen to the counter stool, 3 Ruth to the window, 4 Dev to the door, 5 Ana behind the counter. Everyone enters through the right-wall door.",
    "thumb": "thumbs/BO_STAGING.jpg"
   }
  }
