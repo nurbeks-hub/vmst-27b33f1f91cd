@@ -6105,85 +6105,88 @@
    ]
   },
   {
-   "id": "40",
+   "id": "125",
    "tier": "Остальное: звук и музыка",
    "direction": "Звук и музыка",
+   "order": 40,
    "task_mode": "R2V",
    "aspect_ratio": "16:9",
    "duration": "30s",
-   "title_ru": "Румба сквозь меняющиеся миры, один дубль",
-   "title_en": "Rumba through shifting worlds, one take",
-   "summary_ru": "Ана и Дев танцуют румбу 30 с без склеек, а мир вокруг трижды меняется: бальный зал → ночная улица → крыша в вечернем свете → руины собора на рассвете. Ждём, что танец не прерывается и идёт в такт 100 BPM, свет на телах и пол под ногами меняются вместе с фоном, а лица и костюмы не меняются.",
-   "summary_en": "Ana and Dev dance a 30-second rumba without a single cut while the world around them changes three times: ballroom → night street → rooftop in late-day light → cathedral ruins at dawn. We expect the dance to stay unbroken and on the 100 BPM beat, the light on their bodies and the floor underfoot to change together with the background, and faces and costumes to stay the same.",
+   "title_ru": "Румба сквозь меняющиеся миры, один дубль, только по рефам",
+   "title_en": "Rumba through shifting worlds, one take, references only",
+   "summary_ru": "Ана и Дев танцуют румбу 30 с без склеек, а мир вокруг трижды меняется: бальный зал → ночная улица → крыша в вечернем свете → неф разрушенного собора на рассвете. Только рефы: лица — с листов персонажей, костюмы — из текста, каждая локация — отдельный пустой реф. Ждём, что танец не прерывается и идёт в такт 100 BPM, мир меняется только за предметом переднего плана, свет на телах и пол под ногами меняются вместе с фоном, а лица и костюмы не меняются.",
+   "summary_en": "Ana and Dev dance a 30-second rumba without a single cut while the world around them changes three times: ballroom → night street → rooftop in late-day light → ruined cathedral nave at dawn. References only: faces come from the character sheets, costumes from the text, and each location is its own empty reference. We expect the dance to stay unbroken and on the 100 BPM beat, the world to change only behind a foreground object, the light on their bodies and the floor underfoot to change with the background, and faces and costumes to stay the same.",
    "checks": [
     {
      "name_ru": "Один дубль",
-     "detail_ru": "30 с без склеек, затемнений и смены кадра; пара всё время в полный рост, ноги видны, кадр чуть смещён от центра.",
+     "detail_ru": "30 с без склеек, затемнений и смены кадра; пара всё время в полный рост, ноги видны, в левой или правой трети кадра; камера кружит плавно (около одного оборота за ролик), без рывков и зума.",
      "name_en": "One take",
-     "detail_en": "30 s with no cuts, fades or shot changes; the couple stays full-body the whole time, feet visible, framed slightly off-centre."
+     "detail_en": "30 s with no cuts, fades or shot changes; the couple stays full-body with feet visible, in the left or right third of the frame; the camera circles smoothly (about one full turn over the clip), no jerks or zoom."
     },
     {
      "name_ru": "Такт",
-     "detail_ru": "Музыка румбы стабильно 100 BPM (такт 2,4 с); шаги в ритме румбы (быстрый-быстрый-медленный), без пауз и застывших поз; финальный выпад точно на сильную долю на 28,8 с и держится до конца.",
+     "detail_ru": "Музыка румбы стабильно 100 BPM (такт 2,4 с, доля 0,6 с); шаги в ритме румбы (быстрый-быстрый-медленный), без пауз и застывших поз; финальный выпад точно на сильную долю 28,8 с и неподвижно держится до 30 с.",
      "name_en": "Tempo",
-     "detail_en": "The rumba music holds a steady 100 BPM (one bar = 2.4 s); steps in rumba rhythm (quick, quick, slow), no pauses or frozen poses; the final lunge lands exactly on the downbeat at 28.8 s and holds to the end."
+     "detail_en": "The rumba music holds a steady 100 BPM (one bar = 2.4 s, one beat = 0.6 s); steps in rumba rhythm (quick, quick, slow), no pauses or frozen poses; the final lunge lands exactly on the 28.8 s downbeat and holds still to 30 s."
     },
     {
-     "name_ru": "Фигуры по порядку",
-     "detail_ru": "Веер → хоккейная клюшка, алемана, закрытый бейсик, один спот-тёрн, нью-йорк в обе стороны, рука к руке → закрытие и выпад.",
-     "name_en": "Figures in order",
-     "detail_en": "Fan → Hockey Stick, Alemana, closed basic, one Spot Turn, New York to both sides, Hand-to-Hand → closing basic and lunge."
+     "name_ru": "Фигуры по порядку и по тактам",
+     "detail_ru": "Веер (0–2,4) → хоккейная клюшка (2,4–7,2) → алемана (7,2–12) → два спот-тёрна в разные стороны (12–16,8, по такту на каждый) → нью-йорк в обе стороны (16,8–21,6) → «рука к руке» в обе стороны (21,6–26,4) → закрывающий бейсик (26,4–28,8) → выпад.",
+     "name_en": "Figures in order and on the bars",
+     "detail_en": "Fan (0–2.4) → Hockey Stick (2.4–7.2) → Alemana (7.2–12) → two Spot Turns to opposite sides (12–16.8, one bar each) → New York to both sides (16.8–21.6) → Hand-to-Hand to both sides (21.6–26.4) → closing basic (26.4–28.8) → lunge."
     },
     {
-     "name_ru": "Миры по таймлайну",
-     "detail_ru": "Зал (0–7,2 с) → улица (8,4–14,4) → крыша (16,8–24) → собор (25,2–30); переходы: камера проходит за золочёной колонной с канделябрами, дуга камеры 90° за один спот-тёрн с фонарным столбом на переднем плане, проход за опорой водонапорной башни.",
-     "name_en": "Worlds on the timeline",
-     "detail_en": "Ballroom (0–7.2 s) → street (8.4–14.4) → rooftop (16.8–24) → cathedral (25.2–30); transitions: the camera passes behind a gilded candlelit column, a 90° camera arc during one Spot Turn with a lamp post in the foreground, a pass behind a water-tower leg."
+     "name_ru": "Миры по таймлайну, переходы с видимой причиной",
+     "detail_ru": "Зал (0–7,2 с) → улица (8,4–14,4) → крыша (15–24) → собор (25,2–30). Каждая смена — только когда камера проходит за предметом уходящего мира: белая колонна зала, фонарный столб улицы, стальная опора водонапорной башни. Без морфинга фона на открытом кадре, вспышек, тумана, свечения и частиц.",
+     "name_en": "Worlds on the timeline, transitions with a visible cause",
+     "detail_en": "Ballroom (0–7.2 s) → street (8.4–14.4) → rooftop (15–24) → cathedral (25.2–30). Each change happens only while the camera passes behind an object of the outgoing world: the ballroom's white column, the street's lamp post, the water tower's steel leg. No background morphing in the open frame, no flashes, mist, glow or particles."
     },
     {
      "name_ru": "Свет и пол меняются вместе",
-     "detail_ru": "Свет на телах совпадает с текущим миром: свечи и люстры → белые витрины сбоку → тёплое дымчатое низкое солнце сбоку → мягкий серый рассветный свет; пол: паркет → влажный асфальт с отражениями → битумная кровля → мокрые каменные плиты; звук каблуков меняется вместе.",
+     "detail_ru": "Свет на телах совпадает с текущим миром: мягкий тёплый свет люстр и свечей → тёплые витрины сбоку → тёплое низкое солнце сбоку → ровный серо-розовый рассвет; пол: паркет «ёлочкой» → влажный асфальт с мягким отражением ног → битумная кровля → каменные плиты; звук каблуков меняется вместе.",
      "name_en": "Light and floor change together",
-     "detail_en": "The light on their bodies matches the current world: candles and chandeliers → white shop windows from the side → warm hazy low sun from the side → soft grey dawn light; floor: parquet → wet asphalt with reflections → tar roof → wet flagstones; the sound of the heels changes with it."
+     "detail_en": "The light on their bodies matches the current world: soft warm chandelier and candle light → warm shop windows from the side → warm low sun from the side → even grey-pink dawn; floor: herringbone parquet → damp asphalt softly mirroring their legs → tar roof → flagstones; the sound of the heels changes with it."
     },
     {
      "name_ru": "Без скачков позы",
-     "detail_ru": "На переходах поза и положение пары непрерывны; никаких прыжков тела.",
+     "detail_ru": "На переходах поза, положение и хват пары непрерывны; никаких прыжков тела, лишних рук или смены партнёра местами.",
      "name_en": "No pose jumps",
-     "detail_en": "Through the transitions the couple's pose and position stay continuous; no body jumps."
+     "detail_en": "Through the transitions the couple's pose, position and hold stay continuous; no body jumps, extra arms or partners swapping places."
     },
     {
      "name_ru": "Лица и костюмы",
-     "detail_ru": "Ана и Дев как на CH_ANA и CH_DEV, костюмы как на FR_RUMBA_START; ровно два человека, без лишних отражений.",
+     "detail_ru": "Лицо Аны (родинка у носа, полная фигура, низкий пучок, шрам на правом предплечье) как на CH_ANA, лицо и седеющая борода Дева как на CH_DEV, Дев без кепки. Костюмы из текста, а не с листов: изумрудное атласное платье до колена с разрезом и телесные туфли; чёрная рубашка, чёрные брюки и туфли; не меняются от мира к миру. Ровно два человека, без лишних отражений и фигур в витринах.",
      "name_en": "Faces and costumes",
-     "detail_en": "Ana and Dev as in CH_ANA and CH_DEV, costumes as in FR_RUMBA_START; exactly two people, no stray reflections."
+     "detail_en": "Ana's face (mole by the nose, full figure, low bun, scar on the right forearm) as in CH_ANA, Dev's face and greying beard as in CH_DEV, Dev without the cap. Costumes from the text, not from the sheets: knee-length emerald satin dress with a slit and nude heels; black shirt, black trousers and shoes; they never change between worlds. Exactly two people, no stray reflections or figures in the shop windows."
     },
     {
      "name_ru": "Рефы локаций",
-     "detail_ru": "Улица = LO_STREET_NIGHT, крыша = LO_ROOFTOP (пара далеко от разрыва между домами), собор = LO_CATHEDRAL.",
+     "detail_ru": "Зал = LO_BALLROOM, улица = LO_STREET_NIGHT2, крыша = LO_ROOFTOP2 (пара на открытой середине кровли), собор = LO_CATHEDRAL2; все четыре узнаются по архитектуре и свету.",
      "name_en": "Location references",
-     "detail_en": "Street = LO_STREET_NIGHT, rooftop = LO_ROOFTOP (the couple far from the gap between buildings), cathedral = LO_CATHEDRAL."
+     "detail_en": "Ballroom = LO_BALLROOM, street = LO_STREET_NIGHT2, rooftop = LO_ROOFTOP2 (the couple in the open middle of the roof), cathedral = LO_CATHEDRAL2; all four are recognisable by architecture and light."
     }
    ],
    "inputs": [
-    "FR_RUMBA_START",
     "CH_ANA",
     "CH_DEV",
-    "LO_STREET_NIGHT",
-    "LO_ROOFTOP",
-    "LO_CATHEDRAL"
+    "LO_BALLROOM",
+    "LO_STREET_NIGHT2",
+    "LO_ROOFTOP2",
+    "LO_CATHEDRAL2"
    ],
-   "reference_mapping": "@Image1 = FR_RUMBA_START (exact start frame: Ana and Dev in rumba costumes in the Fan position in a candlelit ballroom; fixes costumes); @Image2 = CH_ANA (Ana's face and hair); @Image3 = CH_DEV (Dev's face and beard); @Image4 = LO_STREET_NIGHT (world 2: wet night street); @Image5 = LO_ROOFTOP (world 3: city rooftops in late-afternoon light); @Image6 = LO_CATHEDRAL (world 4: ruined gothic cathedral)",
-   "prompt": "[Core Task]\n[Reference Mapping] @Image1 is the exact start frame and fixes the costumes: Ana and Dev in the rumba Fan position in a candlelit ballroom, she in a fitted deep-emerald silk rumba dress with a thigh-high slit and nude Latin heels, he in a black tuxedo jacket over a black shirt, black trousers and black patent shoes. @Image2 fixes Ana's face, dark hair in a low bun and the burn scar on her forearm. @Image3 fixes Dev's face and trimmed beard; he is bareheaded here. @Image4 is world 2: the wet street at night. @Image5 is world 3: the city rooftops in late-afternoon light. @Image6 is world 4: the ruined gothic cathedral.\nOne single continuous 30-second shot. The video starts exactly on @Image1. Only these two people exist. The music is a rumba at a steady 100 BPM, one bar every 2.4 seconds, claves and a soft bass accent on beat 1 of every bar, never stopping and never changing tempo through the world changes. The couple never stops dancing: strict rumba timing, quick, quick, slow, with Cuban hip action, straight knees on arrival and no held poses until the final lunge. The world transforms behind and under them; the dancers stay at full body with feet visible, framed slightly off-centre as the camera circles, and their poses continue smoothly through every transition.\n\n[Plot Summary]\nShot 1, 00:00-00:30, one continuous shot:\n00:00-00:07.2: The candlelit ballroom of @Image1, warm chandelier and candle light on their skin, polished parquet underfoot. Figures: Fan into Hockey Stick, then he raises his arm for her Alemana turn.\n00:07.2-00:08.4: Transition 1: during the Alemana the circling camera passes behind a gilded candlelit column in the foreground for one beat; as the column clears, the ballroom has become the wet night street of @Image4.\n00:08.4-00:14.4: The street of @Image4: streetlight and shop-window glow, damp asphalt softly mirroring both dancers, their bodies now lit by the white shop windows from the side. Figures: the end of the Alemana and a closed basic.\n00:14.4-00:16.8: Transition 2, one bar: the camera arcs 90 degrees around the couple during one Spot Turn; as a dark lamp post slides through the foreground, the street is gone and the rooftop of @Image5 surrounds them.\n00:16.8-00:24: The rooftop of @Image5, the couple dancing on the tar roof far from its edge and the gap, the warm hazy low sun of @Image5 on one side, a light wind moving the silk. Figures: New York to both sides, side by side, free arms extended.\n00:24-00:25.2: Transition 3: the circling camera passes close behind a steel leg of the rooftop water tower for one beat; as it clears, they are dancing on the stone floor of the cathedral of @Image6.\n00:25.2-00:30: The ruined cathedral of @Image6 at dawn: broken arches, mist far back between the columns, wet flagstones, the soft grey dawn light of @Image6 falling through the open roof onto them. Figures: Hand-to-Hand into a closing basic; the final lunge lands exactly on the downbeat at 00:28.8 and holds to the end.\n\n[Audio Style]\nThe rumba at 100 BPM, continuous and unbroken. Heel taps change with the surface: crisp on parquet, a wet tap on asphalt, a dull scuff on the roof, a hollow stone tap in the cathedral. Each world's ambience fades in under the music at its transition: distant traffic and a dripping gutter, wind over the rooftops, birds echoing under the stone arches.\n\n[Camera Work and Core Constraints]\nOne continuous Steadicam move: a slow circle around the couple at about 20 degrees per second, one faster 90-degree arc at 00:14.4-00:16.8, constant eye-level height and full-body framing. The light on their bodies always matches the current world and changes together with it. Faces match @Image2 and @Image3, costumes match @Image1, in every frame. Natural anatomy and hands, real silk physics, 35 mm film look, fine grain, muted grade.\n\n[Negative Prompt]\ncuts, extra people, subtitles, on-screen text, watermark",
-   "prompt_ru": "[Основная задача]\n[Соответствие референсов] @Image1 — точный стартовый кадр, задаёт костюмы: Ана и Дев в позиции «веер» румбы в бальном зале при свечах, она в облегающем шёлковом платье для румбы глубокого изумрудного цвета с разрезом до бедра и в телесных латинских туфлях на каблуке, он в чёрном смокинговом пиджаке поверх чёрной рубашки, чёрных брюках и чёрных лакированных туфлях. @Image2 задаёт лицо Аны, тёмные волосы в низком пучке и шрам от ожога на предплечье. @Image3 задаёт лицо Дева и аккуратную бороду; здесь он без головного убора. @Image4 — мир 2: мокрая ночная улица. @Image5 — мир 3: городские крыши в предвечернем свете. @Image6 — мир 4: разрушенный готический собор.\nОдин непрерывный 30-секундный кадр. Видео начинается точно с @Image1. Существуют только эти два человека. Музыка — румба в стабильных 100 BPM, один такт каждые 2.4 секунды, клавесы и мягкий басовый акцент на первую долю каждого такта, музыка ни разу не останавливается и не меняет темп при смене миров. Пара ни на миг не перестаёт танцевать: строгий ритм румбы, быстрый, быстрый, медленный, с кубинским движением бёдер, прямыми коленями при приходе в позицию и без удержанных поз до финального выпада. Мир трансформируется позади и под ними; танцоры остаются в полный рост, ноги видны, кадр чуть смещён от центра, пока камера кружит, а их позы плавно продолжаются через каждый переход.\n\n[Сюжет]\nКадр 1, 00:00-00:30, один непрерывный кадр:\n00:00-00:07.2: Бальный зал при свечах @Image1, тёплый свет люстр и свечей на их коже, под ногами натёртый паркет. Фигуры: веер в хоккейную клюшку, затем он поднимает руку для её поворота алемана.\n00:07.2-00:08.4: Переход 1: во время алеманы кружащая камера на одну долю проходит за золочёной колонной с канделябрами на переднем плане; когда колонна уходит, бальный зал уже превратился в мокрую ночную улицу @Image4.\n00:08.4-00:14.4: Улица @Image4: свет фонарей и сияние витрин, влажный асфальт мягко отражает обоих танцоров, их тела теперь освещены сбоку белыми витринами. Фигуры: окончание алеманы и закрытый бейсик.\n00:14.4-00:16.8: Переход 2, один такт: камера проходит дугу в 90 градусов вокруг пары за один спот-тёрн; когда тёмный фонарный столб проплывает на переднем плане, улица исчезает, и крыша @Image5 окружает их.\n00:16.8-00:24: Крыша @Image5, пара танцует на битумной кровле далеко от её края и разрыва между домами, тёплое дымчатое низкое солнце @Image5 с одной стороны, лёгкий ветер колышет шёлк. Фигуры: нью-йорк в обе стороны, бок о бок, свободные руки вытянуты.\n00:24-00:25.2: Переход 3: кружащая камера на одну долю проходит вплотную за стальной опорой водонапорной башни на крыше; когда опора уходит, они танцуют на каменном полу собора @Image6.\n00:25.2-00:30: Разрушенный собор @Image6 на рассвете: обрушенные арки, туман далеко между колоннами, мокрые каменные плиты, мягкий серый рассветный свет @Image6 падает на них через открытую крышу. Фигуры: рука к руке, переходящая в закрывающий бейсик; финальный выпад приходится точно на сильную долю на 00:28.8 и держится до конца.\n\n[Стиль звука]\nРумба в 100 BPM, непрерывная и без разрывов. Стук каблуков меняется вместе с поверхностью: чёткий по паркету, влажный стук по асфальту, глухое шарканье по крыше, гулкий каменный стук в соборе. Атмосфера каждого мира проявляется под музыкой на её переходе: далёкий трафик и капающий водосток, ветер над крышами, птицы, эхом разносящиеся под каменными арками.\n\n[Работа камеры и ключевые ограничения]\nОдно непрерывное движение стедикама: медленный круг вокруг пары примерно 20 градусов в секунду, одна более быстрая дуга в 90 градусов на 00:14.4-00:16.8, постоянная высота на уровне глаз и кадрирование в полный рост. Свет на их телах всегда соответствует текущему миру и меняется вместе с ним. Лица соответствуют @Image2 и @Image3, костюмы — @Image1, в каждом кадре. Естественная анатомия и руки, настоящая физика шёлка, вид 35-мм плёнки, мелкое зерно, приглушённая цветокоррекция.\n\n[Негативный промпт]\nсклейки, лишние люди, субтитры, текст на экране, водяной знак",
+   "reference_mapping": "@Image1 = CH_ANA (Ana's identity only: face, mole by the nose, full figure, low bun, burn scar on the right forearm; her sheet clothes are ignored); @Image2 = CH_DEV (Dev's identity only: face, greying beard, build; bareheaded, his sheet clothes and cap are ignored); @Image3 = LO_BALLROOM (world 1: empty cream ballroom, herringbone parquet, chandeliers, white fluted columns); @Image4 = LO_STREET_NIGHT2 (world 2: night shopping street, damp asphalt, warm shop windows, cast-iron lamp post); @Image5 = LO_ROOFTOP2 (world 3: flat tar roof with a wooden water tower on a steel stand, low late-day sun); @Image6 = LO_CATHEDRAL2 (world 4: roofless gothic nave at dawn, flagstone floor). Costumes are given only in the text.",
+   "prompt": "[Core Task]\nOne single continuous 30-second shot of a rumba danced by Ana and Dev, the only two people anywhere. The music is a rumba at a steady 100 BPM, one bar every 2.4 seconds, claves and a soft bass accent on beat 1 of every bar, never stopping and never changing tempo. They never stop dancing: strict rumba timing, quick, quick, slow, with Cuban hip action and straight knees on arrival, every pose flowing into the next until the final lunge. The world around and under them changes three times; the dance, the couple and their costumes carry straight through every change.\n\n[Reference Mapping]\n@Image1 gives only Ana's identity: her face, the mole beside her nose, her full figure, dark hair pulled back into a low bun and the burn scar on her right forearm. @Image2 gives only Dev's identity: his face, his greying beard and his build; here he is bareheaded with short dark hair. Their clothes in @Image1 and @Image2 are everyday clothes and are replaced here: Ana wears a fitted sleeveless deep-emerald satin rumba dress, knee length with a slit on one side, and nude Latin heels; Dev wears a long-sleeved black Latin shirt open at the collar, black high-waisted trousers and black dance shoes. @Image3 is world 1: the empty cream ballroom with herringbone parquet, crystal chandeliers and white fluted columns. @Image4 is world 2: the night shopping street with damp asphalt and warm shop windows. @Image5 is world 3: the flat city rooftop with the wooden water tower. @Image6 is world 4: the roofless gothic cathedral nave at dawn.\n\n[Plot Summary]\nShot 1, 00:00-00:30, one continuous shot, the couple full body with feet visible, framed in the left or right third of the frame:\n00:00-00:07.2: The ballroom of @Image3, on the open parquet near the row of white columns, soft warm chandelier and candle light on their skin. Figures: the Fan, then the Hockey Stick over two bars.\n00:07.2-00:08.4: Transition 1: as he raises his left arm and she begins the Alemana turn underneath it, the circling camera passes close behind one white fluted column of @Image3, which sweeps across the frame in about one beat; as the column clears, the ballroom has become the street of @Image4.\n00:08.4-00:14.4: The street of @Image4: the warm shop-window light of @Image4 now lights them from the side, the damp asphalt softly mirroring their legs. Figures: the end of the Alemana into closed hold, then a Spot Turn to her right on the bar 00:12-00:14.4.\n00:14.4-00:15.0: Transition 2: on the downbeat at 00:14.4 they begin a Spot Turn to the other side while the camera, now arcing a little faster, passes the cast-iron lamp post of @Image4 close to the lens; as the post clears, the street is gone and the rooftop of @Image5 surrounds them.\n00:15.0-00:24.0: The rooftop of @Image5, the couple dancing on the open middle of the tar roof, the warm low sun of @Image5 on one side of them, a light breeze moving the satin. Figures: the end of the second Spot Turn, then the New York to both sides with free arms extended, then the Hand-to-Hand to the first side.\n00:24.0-00:25.2: Transition 3: the circling camera passes close behind the nearest steel leg of the water tower of @Image5, which sweeps across the frame in about one beat; as it clears, they are dancing on the flagstones of the cathedral of @Image6.\n00:25.2-00:30: The cathedral nave of @Image6: pointed arches and clustered columns beside them, the soft grey-pink dawn light of @Image6 falling evenly onto them from the open sky. Figures: the Hand-to-Hand to the second side, a closing basic from 00:26.4, and the final lunge that lands exactly on the downbeat at 00:28.8 and holds still to the end.\n\n[Audio Style]\nThe rumba at 100 BPM, continuous and unbroken. Heel taps change with the floor: crisp on the parquet, a soft wet tap on the asphalt, a dull scuff on the tar roof, a hollow stone tap in the nave. Each world's ambience fades in under the music at its transition: a large quiet room, distant traffic and a dripping gutter, wind over the rooftops, birds echoing under the stone arches.\n\n[Camera Work and Core Constraints]\nOne continuous Steadicam move at chest height, about 3.5 metres from the couple, 35 mm lens: a slow walking circle around them at about 12 degrees per second, widening to about 19 degrees per second during the two Spot Turns at 00:12-00:16.8, then back to the slow circle; about one full circle over the 30 seconds, constant height and full-body framing, the couple always kept in the left or right third. Each world change happens only behind a foreground object of the outgoing world, and the couple's pose and position continue unbroken through it. The light on their bodies and the floor under their feet always match the current world. Faces match @Image1 and @Image2 in every frame; the costumes stay exactly as described. Natural anatomy and hands, real satin weight and movement, matte skin with natural texture, 35 mm film look, fine grain, natural grade.\n\n[Negative Prompt]\ncuts, extra people, on-screen text",
+   "prompt_ru": "[Основная задача]\nОдин непрерывный 30-секундный кадр: Ана и Дев танцуют румбу, кроме них нигде нет ни одного человека. Музыка — румба в стабильных 100 BPM, один такт каждые 2,4 секунды, клавесы и мягкий басовый акцент на первую долю каждого такта, музыка ни разу не останавливается и не меняет темп. Пара ни на миг не перестаёт танцевать: строгий ритм румбы, быстрый, быстрый, медленный, с кубинским движением бёдер и прямыми коленями при приходе в позицию, каждая поза перетекает в следующую до финального выпада. Мир вокруг и под ними трижды меняется; танец, пара и костюмы проходят сквозь каждую смену без изменений.\n\n[Соответствие референсов]\n@Image1 задаёт только внешность Аны: лицо, родинку у носа, полную фигуру, тёмные волосы, убранные в низкий пучок, и шрам от ожога на правом предплечье. @Image2 задаёт только внешность Дева: лицо, седеющую бороду и телосложение; здесь он без головного убора, с короткими тёмными волосами. Одежда на @Image1 и @Image2 повседневная и здесь заменяется: на Ане облегающее платье для румбы без рукавов из изумрудного атласа, длиной до колена, с разрезом сбоку, и телесные латинские туфли на каблуке; на Деве чёрная латинская рубашка с длинным рукавом и расстёгнутым воротом, чёрные брюки с высокой талией и чёрные танцевальные туфли. @Image3 — мир 1: пустой кремовый бальный зал с паркетом «ёлочкой», хрустальными люстрами и белыми колоннами с каннелюрами. @Image4 — мир 2: ночная торговая улица с влажным асфальтом и тёплыми витринами. @Image5 — мир 3: плоская городская крыша с деревянной водонапорной башней. @Image6 — мир 4: неф разрушенного готического собора без крыши на рассвете.\n\n[Сюжет]\nКадр 1, 00:00-00:30, один непрерывный кадр, пара в полный рост, ноги видны, в левой или правой трети кадра:\n00:00-00:07.2: Бальный зал @Image3, на открытом паркете у ряда белых колонн, мягкий тёплый свет люстр и свечей на коже. Фигуры: веер, затем хоккейная клюшка на два такта.\n00:07.2-00:08.4: Переход 1: он поднимает левую руку, она начинает под ней поворот алемана, а кружащая камера проходит вплотную за одной белой колонной @Image3, которая пересекает кадр примерно за одну долю; когда колонна уходит, бальный зал уже стал улицей @Image4.\n00:08.4-00:14.4: Улица @Image4: тёплый свет витрин @Image4 теперь освещает их сбоку, влажный асфальт мягко отражает их ноги. Фигуры: окончание алеманы в закрытую позицию, затем спот-тёрн вправо от неё в такте 00:12-00:14.4.\n00:14.4-00:15.0: Переход 2: на сильную долю 00:14.4 они начинают спот-тёрн в другую сторону, а камера, идущая теперь по дуге чуть быстрее, проходит у самого объектива мимо чугунного фонарного столба @Image4; когда столб уходит, улицы нет, их окружает крыша @Image5.\n00:15.0-00:24.0: Крыша @Image5, пара танцует на открытой середине битумной кровли, тёплое низкое солнце @Image5 с одной стороны, лёгкий ветер шевелит атлас. Фигуры: окончание второго спот-тёрна, затем нью-йорк в обе стороны с вытянутыми свободными руками, затем «рука к руке» в первую сторону.\n00:24.0-00:25.2: Переход 3: кружащая камера проходит вплотную за ближней стальной опорой водонапорной башни @Image5, которая пересекает кадр примерно за одну долю; когда опора уходит, они танцуют на каменных плитах собора @Image6.\n00:25.2-00:30: Неф собора @Image6: стрельчатые арки и пучковые колонны рядом с ними, мягкий серо-розовый рассветный свет @Image6 ровно падает на них с открытого неба. Фигуры: «рука к руке» во вторую сторону, закрывающий бейсик с 00:26.4 и финальный выпад, который приходится точно на сильную долю 00:28.8 и неподвижно держится до конца.\n\n[Стиль звука]\nРумба в 100 BPM, непрерывная и без разрывов. Стук каблуков меняется вместе с полом: чёткий по паркету, мягкий влажный по асфальту, глухое шарканье по битумной кровле, гулкий каменный стук в нефе. Атмосфера каждого мира проявляется под музыкой на её переходе: большой тихий зал, далёкий трафик и капающий водосток, ветер над крышами, птицы, эхом разносящиеся под каменными арками.\n\n[Работа камеры и ключевые ограничения]\nОдно непрерывное движение стедикама на уровне груди, примерно в 3,5 метра от пары, объектив 35 мм: медленный шаговый круг вокруг них примерно 12 градусов в секунду, на двух спот-тёрнах 00:12-00:16.8 он ускоряется примерно до 19 градусов в секунду, затем снова медленный круг; примерно один полный оборот за 30 секунд, постоянная высота и кадр в полный рост, пара всегда в левой или правой трети. Каждая смена мира происходит только за предметом переднего плана из уходящего мира, а поза и положение пары непрерывно продолжаются сквозь неё. Свет на телах и пол под ногами всегда соответствуют текущему миру. Лица соответствуют @Image1 и @Image2 в каждом кадре; костюмы остаются точно такими, как описано. Естественная анатомия и руки, настоящий вес и движение атласа, матовая кожа с естественной текстурой, вид 35-мм плёнки, мелкое зерно, естественная цветокоррекция.\n\n[Негативный промпт]\nсклейки, лишние люди, текст на экране",
+   "reviewed": true,
+   "review_notes": "Self-review 06.11.2026 against review/BRIEF.md and the four lenses, including every item-40 note in review/*.json. Antislop: no start frame; six refs each with one job (two identities, four empty plates); costumes in text because the sheets show a chef uniform and an orange shell with a cap; light taken from each plate (soft candle/chandelier, warm windows from the side, low sun from the side, even overcast dawn), no rim/backlight glamour, no sunbeams, no mist band, no splashes, no glow or particles; 'sultry' not used; matte skin; couple in a third, never centred; three-word negative line. Physics/timing: 100 BPM grid (bar 2.4 s, beat 0.6 s); Fan 1 bar, Hockey Stick 2, Alemana 2, two Spot Turns one bar each = 4.8 s (12-16.8), New York 2, Hand-to-Hand 2, closing basic 1, lunge on the 28.8 downbeat held 1.2 s; the closed basic of item 40 dropped so the real figure lengths fit 30 s. Camera at ~3.5 m radius: 12 deg/s = ~0.7 m/s walking, 19 deg/s = ~1.2 m/s during the spot turns (90 deg in 4.8 s instead of 180 deg in 1.5 s); about one full circle in total. Every wipe has a physical carrier from the outgoing world that exists in its plate (white fluted column in LO_BALLROOM, lamp post at the left edge of LO_STREET_NIGHT2, near steel leg of the water tower in LO_ROOFTOP2), crossing the frame in about one beat. Shot craft: one take is the test itself; the orbit is motivated (it reveals each world change and follows the turning couple), constant chest height, 35 mm, full body, off-centre. Test design: checks map to stated bars and times (worlds 0-7.2 / 8.4-14.4 / 15-24 / 25.2-30), figure order and lengths checkable, transitions must have a visible cause, costumes checkable against text, location checks name the new plates. Rooftop plate is one continuous roof, so no gap/edge hazard is needed in the text. Prompt 5,009 chars < 7,000, so no prompt_short. Known residual risk: LO_STREET_NIGHT2 windows show dresses on display forms; the check requires no figures in the windows. Lint (lint_prompt.py): the HIGH flag is the set-wide three-word [Negative Prompt] line kept for format parity with all items; in-prompt duration is the timeline itself.",
    "num": "79",
    "inputs_expanded": [
-    "FR_RUMBA_START",
     "CH_ANA",
     "CH_DEV",
-    "LO_STREET_NIGHT",
-    "LO_ROOFTOP",
-    "LO_CATHEDRAL"
+    "LO_BALLROOM",
+    "LO_STREET_NIGHT2",
+    "LO_ROOFTOP2",
+    "LO_CATHEDRAL2"
    ]
   },
   {
@@ -8173,6 +8176,12 @@
    "kind": "image",
    "thumb": "thumbs/LO_AZ_TOILET.jpg"
   },
+  "LO_BALLROOM": {
+   "id": "LO_BALLROOM",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/LO_BALLROOM.png",
+   "kind": "image",
+   "thumb": "thumbs/LO_BALLROOM.jpg"
+  },
   "LO_CAFE_TERRACE": {
    "id": "LO_CAFE_TERRACE",
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/LO_CAFE_TERRACE.png",
@@ -8190,6 +8199,12 @@
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/LO_CATHEDRAL.png",
    "kind": "image",
    "thumb": "thumbs/LO_CATHEDRAL.jpg"
+  },
+  "LO_CATHEDRAL2": {
+   "id": "LO_CATHEDRAL2",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/LO_CATHEDRAL2.png",
+   "kind": "image",
+   "thumb": "thumbs/LO_CATHEDRAL2.jpg"
   },
   "LO_CLIFF": {
    "id": "LO_CLIFF",
@@ -8251,6 +8266,12 @@
    "kind": "image",
    "thumb": "thumbs/LO_ROOFTOP.jpg"
   },
+  "LO_ROOFTOP2": {
+   "id": "LO_ROOFTOP2",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/LO_ROOFTOP2.png",
+   "kind": "image",
+   "thumb": "thumbs/LO_ROOFTOP2.jpg"
+  },
   "LO_STATION": {
    "id": "LO_STATION",
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/LO_STATION.png",
@@ -8274,6 +8295,12 @@
    "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/LO_STREET_NIGHT.png",
    "kind": "image",
    "thumb": "thumbs/LO_STREET_NIGHT.jpg"
+  },
+  "LO_STREET_NIGHT2": {
+   "id": "LO_STREET_NIGHT2",
+   "file": "https://github.com/nurbeks-hub/vmst-27b33f1f91cd/releases/download/inputs-v2/LO_STREET_NIGHT2.png",
+   "kind": "image",
+   "thumb": "thumbs/LO_STREET_NIGHT2.jpg"
   },
   "LO_STUDIO": {
    "id": "LO_STUDIO",
