@@ -167,7 +167,7 @@ function detailHTML(i){
 function render(){
   let html = "", tier = null;
   for (const i of items){
-    if (i.tier !== tier){ tier = i.tier; html += `<tr class="sect"><td colspan="${NC}">${({core: (items.some(x=>x.tier==="extended")?"Ядро — 20 главных сцен":"Основные сцены"), extended:"Расширение", previs:"Превизы — 3D-блокинг из Blender как видео-реф", drama:"Шорт-драмы"})[tier]||tier}</td></tr>`; }
+    if (i.tier !== tier){ tier = i.tier; html += `<tr class="sect"><td colspan="${NC}">${({core: (items.some(x=>x.tier==="extended")?"Ядро — 20 главных сцен":"Основные сцены"), extended:"Расширение", previs:"Превизы — 3D-блокинг из Blender как видео-реф", real:"Реальные кейсы — Arena Zero (промпты и рефы как переданы)", drama:"Шорт-драмы"})[tier]||tier}</td></tr>`; }
     const ins = i.inputs_expanded || [], dc = doneCount(i.id);
     html += `<tr class="r" data-id="${i.id}">
       <td><span class="ar">▸</span></td><td class="n">${esc(i.id)}</td><td>${esc(i.direction)}</td><td>${esc(i.contrast||"—")}</td>
