@@ -16,7 +16,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-
 h1{font-size:22px;margin:0;font-weight:600}
 .top a{color:var(--accent);text-decoration:none;font-weight:500}
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
-table{width:100%;border-collapse:collapse;min-width:980px}
+table{width:100%;border-collapse:collapse;min-width:1000px;table-layout:fixed}
+table.ck{table-layout:auto}
 th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
 th{background:var(--head);font-weight:600;font-size:12px;color:var(--ink-2);position:sticky;top:0;white-space:nowrap}
 td.n,td.m,td.f,td.d{white-space:nowrap}
@@ -28,10 +29,10 @@ td.t b{font-weight:600}
 td.i{white-space:nowrap;color:var(--ink-2)}
 .ar{display:inline-block;width:14px;color:var(--ink-3);transition:transform .15s}
 tr.o .ar{transform:rotate(90deg)}
-tr.x td{background:var(--open);padding:0 10px 16px}
-.x{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:18px;padding-top:4px}
-.x h4{margin:10px 0 6px;font-size:12px;color:var(--ink-3);font-weight:600;text-transform:uppercase;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
-.x pre{margin:0;white-space:pre-wrap;word-wrap:break-word;background:var(--code);border:1px solid var(--line);border-radius:6px;padding:12px;font:12px/1.5 "JetBrains Mono",monospace;max-height:520px;overflow:auto}
+tr.xr td{background:var(--open);padding:0 10px 16px}
+.xd{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:18px;padding-top:4px}
+.xd h4{margin:10px 0 6px;font-size:12px;color:var(--ink-3);font-weight:600;text-transform:uppercase;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.xd pre{margin:0;white-space:pre-wrap;word-wrap:break-word;background:var(--code);border:1px solid var(--line);border-radius:6px;padding:12px;font:12px/1.5 "JetBrains Mono",monospace;max-height:520px;overflow:auto}
 .cp{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:5px;padding:3px 9px;cursor:pointer;text-transform:none;letter-spacing:0}
 table.ck{min-width:0;border:1px solid var(--line)}
 table.ck td{padding:6px 8px;font-size:13px}
@@ -42,7 +43,7 @@ table.ck td:first-child{font-weight:600;width:38%}
 .in audio{display:block;width:100%;margin:22px 0 6px}
 .in div{display:flex;justify-content:space-between;padding:5px 7px;font:11px "JetBrains Mono",monospace}
 .in a{color:var(--accent);text-decoration:none}
-@media (max-width:800px){.wrap{padding:18px 16px 40px}.x{grid-template-columns:1fr}}
+@media (max-width:800px){.wrap{padding:18px 16px 40px}.xd{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -53,6 +54,7 @@ table.ck td:first-child{font-weight:600;width:38%}
   </div>
   <div class="tw">
     <table>
+      <colgroup><col style="width:28px"><col style="width:44px"><col style="width:150px"><col style="width:150px"><col style="width:76px"><col style="width:58px"><col style="width:52px"><col><col style="width:72px"></colgroup>
       <thead><tr><th></th><th>№</th><th>Направление</th><th>Контраст</th><th>Режим</th><th>Формат</th><th>Длит.</th><th>Сцена и что проверяем</th><th>Инпуты</th></tr></thead>
       <tbody id="tb"></tbody>
     </table>
@@ -82,7 +84,7 @@ function render(){
       <td class="t"><b>${esc(i.title_ru)}</b><br>${esc(i.summary_ru)}</td><td class="i">${ins.length?ins.length+" шт.":"—"}</td></tr>`;
     if (o){
       const ck = (i.checks||[]).map(c=>`<tr><td>${esc(c.name_ru)}</td><td>${esc(c.detail_ru)}</td></tr>`).join("");
-      html += `<tr class="x"><td colspan="9"><div class="x">
+      html += `<tr class="xr"><td colspan="9"><div class="xd">
         <div><h4>Промпт <button class="cp" data-c="${i.id}">Копировать</button></h4><pre>${esc(i.prompt)}</pre></div>
         <div><h4>Что проверяем</h4><table class="ck">${ck}</table>
         ${ins.length?`<h4>Инпуты</h4><div class="ins">${ins.map(card).join("")}</div>`:""}</div>
