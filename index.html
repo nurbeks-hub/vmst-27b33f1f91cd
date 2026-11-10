@@ -259,7 +259,8 @@ function wire(box){
     if (player.classList.contains("pfs")) { pseudo(false); return; }
     const rq = player.requestFullscreen || player.webkitRequestFullscreen;
     if (!rq) { pseudo(true); return; }
-    try { const p = rq.call(player); if (p && p.catch) p.catch(() => pseudo(true)); } catch (err) { pseudo(true); } };
+    try { const p = rq.call(player); if (p && p.catch) p.catch(() => pseudo(true)); } catch (err) { pseudo(true); }
+    setTimeout(() => { if (!fsEl()) pseudo(true); }, 500); };
   document.addEventListener("keydown", e => { if (e.key === "Escape" && player.classList.contains("pfs")) pseudo(false); });
   player.tabIndex = 0;
   player.onkeydown = e => { if (e.code === "Space"){ e.preventDefault(); playing ? stop() : play(); } else if (e.key === "f" || e.key === "F") fsBtn.click(); };
