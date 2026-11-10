@@ -198,6 +198,7 @@ function detailHTML(i){
   const ins = i.inputs_expanded || [];
   const ck = (i.checks||[]).map(c=>{const [a,b]=CK(c); return `<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`;}).join("");
   return `<tr class="xr" data-for="${i.id}"><td colspan="${NC}">
+    <h4 style="margin:4px 0 6px">${T("cmpTitle")}</h4>${cmpHTML(i)}
     <div class="xd">
       <div><h4>${T("prompt")} <button class="cp" data-c="${i.id}">${T("copy")}</button></h4><pre>${esc(PR(i))}</pre></div>
       <div><h4>${T("checks")}</h4><table class="ck">${ck}</table>
