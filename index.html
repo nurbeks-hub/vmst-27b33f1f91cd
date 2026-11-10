@@ -115,6 +115,9 @@ td.rs{white-space:nowrap;color:var(--ink-2)}
 .cmp .player.pfs{position:fixed;inset:0;z-index:2000;background:#000;color:#f5f5f7;display:flex;flex-direction:column;justify-content:center;padding:12px 16px;--bg:#000;--ink:#f5f5f7;--ink-2:#c7c7cc;--ink-3:#8e8e93;--line:#3a3a3c}
 .cmp .player.pfs .stage{width:min(100%,calc((100vh - 140px) * var(--ar)));margin:0 auto;border-radius:6px}
 .cmp .player.pfs .controls,.cmp .player.pfs .pick{width:100%;max-width:1400px;margin-left:auto;margin-right:auto}
+#lb .lbp,#lb .lbn{position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:34px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding-bottom:4px}
+#lb .lbp:hover,#lb .lbn:hover{background:rgba(255,255,255,.28)}
+#lb .lbp{left:16px}#lb .lbn{right:16px}
 </style>
 </head>
 <body>
@@ -164,17 +167,29 @@ function card(id){
     : `<audio src="${esc(m.file)}" controls preload="none"></audio>`;
   return `<div class="in">${media}<div><span>${esc(id)}</span><a href="${esc(m.file)}" download>${T("download")}</a></div></div>`;
 }
-function lightbox(kind, src, cap){
+let LBL = [], LBI = 0;
+function lightbox(list, i){
+  LBL = list; LBI = (i + list.length) % list.length;
+  const {kind, src, cap} = LBL[LBI];
   let lb = document.getElementById("lb");
   if (!lb){ lb = document.createElement("div"); lb.id = "lb"; document.body.appendChild(lb);
-    lb.onclick = e => { if (e.target === lb || e.target.classList.contains("lbx")) closeLb(); };
-    document.addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); }); }
+    lb.onclick = e => { if (e.target === lb || e.target.classList.contains("lbx")) closeLb();
+      else if (e.target.classList.contains("lbp")) lightbox(LBL, LBI - 1);
+      else if (e.target.classList.contains("lbn")) lightbox(LBL, LBI + 1); };
+    document.addEventListener("keydown", e => { if (!lb.classList.contains("on")) return;
+      if (e.key === "Escape") closeLb();
+      else if (e.key === "ArrowLeft") { e.preventDefault(); lightbox(LBL, LBI - 1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); lightbox(LBL, LBI + 1); } }); }
+  const many = LBL.length > 1;
   lb.innerHTML = (kind === "video" ? `<video src="${esc(src)}" controls autoplay playsinline></video>` : `<img src="${esc(src)}" alt="">`)
-    + `<div class="lbc"><span>${esc(cap)}</span><a href="${esc(src)}" download>${T("download")}</a><button class="lbx">✕</button></div>`;
+    + (many ? `<button class="lbp" title="Previous (←)">‹</button><button class="lbn" title="Next (→)">›</button>` : "")
+    + `<div class="lbc">${many ? `<span>${LBI + 1} / ${LBL.length}</span>` : ""}<span>${esc(cap)}</span><a href="${esc(src)}" download>${T("download")}</a><button class="lbx">✕</button></div>`;
   lb.classList.add("on"); document.body.style.overflow = "hidden";
 }
 function closeLb(){ const lb = document.getElementById("lb"); if (!lb) return; lb.classList.remove("on"); lb.innerHTML = ""; document.body.style.overflow = ""; }
-document.addEventListener("click", e => { const pv = e.target.closest(".pv"); if (!pv) return; e.preventDefault(); e.stopPropagation(); lightbox(pv.dataset.lb, pv.dataset.src, pv.title); }, true);
+document.addEventListener("click", e => { const pv = e.target.closest(".pv"); if (!pv) return; e.preventDefault(); e.stopPropagation();
+  const box = pv.closest(".ins") || pv.parentElement; const all = [...box.querySelectorAll(".pv")];
+  lightbox(all.map(x => ({kind: x.dataset.lb, src: x.dataset.src, cap: x.title})), all.indexOf(pv)); }, true);
 const R = id => results[id] || {};
 function takesOf(id){ const t=new Set(); for (const m of Object.values(R(id))) Object.keys(m).forEach(k=>t.add(k)); return [...t].sort(); }
 function segsOf(id){ const s=new Set(); for (const m of Object.values(R(id))) for (const t of Object.values(m)) Object.keys(t).forEach(k=>s.add(k)); return [...s].sort(); }
