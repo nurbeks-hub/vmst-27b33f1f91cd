@@ -112,6 +112,9 @@ td.rs{white-space:nowrap;color:var(--ink-2)}
 .cmp .player:fullscreen .controls,.cmp .player:fullscreen .pick{width:100%;max-width:1400px;margin-left:auto;margin-right:auto}
 .cmp .player:-webkit-full-screen{background:#000;color:#f5f5f7;display:flex;flex-direction:column;justify-content:center;padding:12px 16px;--bg:#000;--ink:#f5f5f7;--ink-2:#c7c7cc;--ink-3:#8e8e93;--line:#3a3a3c}
 .cmp .player:-webkit-full-screen .stage{width:min(100%,calc((100vh - 140px) * var(--ar)));margin:0 auto}
+.cmp .player.pfs{position:fixed;inset:0;z-index:2000;background:#000;color:#f5f5f7;display:flex;flex-direction:column;justify-content:center;padding:12px 16px;--bg:#000;--ink:#f5f5f7;--ink-2:#c7c7cc;--ink-3:#8e8e93;--line:#3a3a3c}
+.cmp .player.pfs .stage{width:min(100%,calc((100vh - 140px) * var(--ar)));margin:0 auto;border-radius:6px}
+.cmp .player.pfs .controls,.cmp .player.pfs .pick{width:100%;max-width:1400px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body>
@@ -250,9 +253,14 @@ function wire(box){
   // full screen
   const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement;
   const fsBtn = box.querySelector(".fs");
+  const pseudo = on => { player.classList.toggle("pfs", on); document.documentElement.style.overflow = on ? "hidden" : ""; };
   fsBtn.onclick = e => { e.stopPropagation();
-    if (fsEl()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-    else (player.requestFullscreen || player.webkitRequestFullscreen).call(player); };
+    if (fsEl()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+    if (player.classList.contains("pfs")) { pseudo(false); return; }
+    const rq = player.requestFullscreen || player.webkitRequestFullscreen;
+    if (!rq) { pseudo(true); return; }
+    try { const p = rq.call(player); if (p && p.catch) p.catch(() => pseudo(true)); } catch (err) { pseudo(true); } };
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && player.classList.contains("pfs")) pseudo(false); });
   player.tabIndex = 0;
   player.onkeydown = e => { if (e.code === "Space"){ e.preventDefault(); playing ? stop() : play(); } else if (e.key === "f" || e.key === "F") fsBtn.click(); };
   // controls
@@ -260,7 +268,7 @@ function wire(box){
     e.stopPropagation(); if (b.disabled) return; const k = b.dataset.k, v = b.dataset.v;
     if (k === "snd"){ s.snd = v; if (va) va.muted = v !== "a"; if (vb) vb.muted = v !== "b";
       box.querySelectorAll('[data-k="snd"]').forEach(x=>x.setAttribute("aria-pressed", x.dataset.v===v)); return; }
-    const t = va.currentTime, wasPlaying = playing, wasFs = fsEl() === player;
+    const t = va.currentTime, wasPlaying = playing, wasFs = fsEl() === player || player.classList.contains("pfs");
     if ((k === "a" && v === s.b) || (k === "b" && v === s.a)) { [s.a, s.b] = [s.b, s.a]; } else s[k] = v;
     stop(); clearInterval(timer);
     const nb = document.createElement("div"); nb.innerHTML = cmpHTML(items.find(x=>x.id===id)); const nbox = nb.firstElementChild;
