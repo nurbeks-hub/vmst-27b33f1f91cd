@@ -70,6 +70,16 @@ td.rs{white-space:nowrap;color:var(--ink-2)}
 .hdr{display:flex;align-items:center;gap:6px;font-size:14px}.hdr a{color:var(--accent);text-decoration:none;font-weight:500}
 .lng button{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink-2);padding:2px 8px;cursor:pointer}.lng button:first-child{border-radius:5px 0 0 5px}.lng button:last-child{border-radius:0 5px 5px 0;border-left:0}.lng button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 @media (max-width:800px){.wrap{padding:18px 16px 40px}.xd{grid-template-columns:1fr}}
+.pv{position:relative;cursor:zoom-in;background:#000;display:block}
+.pv img{display:block;width:100%}
+.pv .nopv{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px}
+.pv .pl{position:absolute;inset:0;margin:auto;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;pointer-events:none}
+#lb{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px;gap:10px}
+#lb.on{display:flex}
+#lb img,#lb video{max-width:96vw;max-height:84vh;object-fit:contain;background:#000}
+#lb .lbc{display:flex;gap:14px;align-items:center;color:#ddd;font-size:13px}
+#lb .lbc a{color:#fff;border:1px solid #555;border-radius:5px;padding:3px 10px;text-decoration:none}
+#lb .lbx{background:none;border:1px solid #555;color:#fff;border-radius:5px;padding:3px 10px;cursor:pointer;font:inherit}
 </style>
 </head>
 <body>
@@ -113,11 +123,22 @@ const st = {};   // per item: {take, seg, snd}
 function card(id){
   const m = inputs[id];
   if (!m) return `<div class="in"><div><span>${esc(id)}</span></div></div>`;
-  const media = m.kind==="image" ? `<a href="${esc(m.file)}" target="_blank"><img src="${esc(m.thumb||m.file)}" loading="lazy" alt="${esc(id)}"></a>`
-    : m.kind==="video" ? `<video src="${esc(m.file)}" poster="${esc(m.thumb||"")}" controls preload="none" playsinline></video>`
+  const media = m.kind==="image" ? `<div class="pv" data-lb="image" data-src="${esc(m.file)}" title="${esc(id)}"><img src="${esc(m.thumb||m.file)}" loading="lazy" alt="${esc(id)}"></div>`
+    : m.kind==="video" ? `<div class="pv" data-lb="video" data-src="${esc(m.file)}" title="${esc(id)}">${m.thumb?`<img src="${esc(m.thumb)}" loading="lazy" alt="${esc(id)}">`:`<div class="nopv">video</div>`}<span class="pl">▶</span></div>`
     : `<audio src="${esc(m.file)}" controls preload="none"></audio>`;
   return `<div class="in">${media}<div><span>${esc(id)}</span><a href="${esc(m.file)}" download>${T("download")}</a></div></div>`;
 }
+function lightbox(kind, src, cap){
+  let lb = document.getElementById("lb");
+  if (!lb){ lb = document.createElement("div"); lb.id = "lb"; document.body.appendChild(lb);
+    lb.onclick = e => { if (e.target === lb || e.target.classList.contains("lbx")) closeLb(); };
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); }); }
+  lb.innerHTML = (kind === "video" ? `<video src="${esc(src)}" controls autoplay playsinline></video>` : `<img src="${esc(src)}" alt="">`)
+    + `<div class="lbc"><span>${esc(cap)}</span><a href="${esc(src)}" download>${T("download")}</a><button class="lbx">✕</button></div>`;
+  lb.classList.add("on"); document.body.style.overflow = "hidden";
+}
+function closeLb(){ const lb = document.getElementById("lb"); if (!lb) return; lb.classList.remove("on"); lb.innerHTML = ""; document.body.style.overflow = ""; }
+document.addEventListener("click", e => { const pv = e.target.closest(".pv"); if (!pv) return; e.preventDefault(); e.stopPropagation(); lightbox(pv.dataset.lb, pv.dataset.src, pv.title); }, true);
 const R = id => results[id] || {};
 function takesOf(id){ const t=new Set(); for (const m of Object.values(R(id))) Object.keys(m).forEach(k=>t.add(k)); return [...t].sort(); }
 function segsOf(id){ const s=new Set(); for (const m of Object.values(R(id))) for (const t of Object.values(m)) Object.keys(t).forEach(k=>s.add(k)); return [...s].sort(); }
